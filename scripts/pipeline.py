@@ -1,7 +1,7 @@
 import modin.pandas as pd
 import numpy as np
 from .metrics import custom_metric, random_predictions
-from sklearn.model_selection import KFold
+from sklearn.model_selection import KFold, train_test_split
 import xgboost
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import ndcg_score
@@ -41,21 +41,60 @@ def run(data: pd.DataFrame, model, n_splits=4, y_name='response_att', take_top_r
     return means, scores
 
 
-class StupidModel:
-    def __init__(self, verbose=False):
-        self.test_model = xgboost.XGBRanker(n_jobs=-1, n_estimators=10)
-        self.control_model = xgboost.XGBRanker(n_jobs=-1, n_estimators=10)
-        self.verbose = verbose
+def validate_on_holdout(data: pd.DataFrame, model, test_size=0.2, y_name='response_att',
+                        take_top_ratio=0.25):
+    """
+    :param data: данные
+    :param model: ранжирующая модель с fit и predict
+    :param test_size: доля данных для теста
+    :param y_name: название столбца с таргетом
+    :param take_top_ratio: на кого мы смотрим сверху
+    :return: метрики по кросс-валидации
+    """
 
-    def fit(self, data, y_train):
-        test_mask = data['group'] == 'test'
-        control_mask = data['group'] == 'control'
-        test = data[test_mask].drop('group', axis=1)
-        control = data[control_mask].drop('group', axis=1)
-        self.test_model.fit(test, y_train[test_mask], [test_mask.sum()], verbose=self.verbose,
-                           eval_set=[(test, y_train[test_mask])], eval_group=[[test_mask.sum()]], eval_metric='ndcg')
-        self.control_model.fit(control, y_train[control_mask], [control_mask.sum()], verbose=self.verbose,
-                           eval_set=[(control, y_train[control_mask])], eval_group=[[control_mask.sum()]], eval_metric='ndcg')
+    train, test = train_test_split(data, test_size=test_size, stratify=data['group'],
+                                   shuffle=True)
+    model.fit(train.drop(['group', y_name], axis=1), train[y_name], train['group'],
+              eval_data=(test.drop(['group', y_name], axis=1), test[y_name], test['group']))
+
+    train['uplift'] = model.predict(train.drop([y_name, 'group'], axis=1))
+    test['uplift'] = model.predict(test.drop([y_name, 'group'], axis=1))
+
+    train_score, test_score = custom_metric(train, take_top_ratio), custom_metric(test, take_top_ratio)
+    train_random, test_random = random_predictions(train, 3, take_top_ratio), \
+                                random_predictions(test, 3, take_top_ratio)
+    scores = {'train': train_score, 'test': test_score, 'train_random':
+        train_random, 'test_random': test_random}
+    return scores, model
+
+
+class StupidModel:
+    def __init__(self, param=None):
+        if param is None:
+            param = {'n_jobs': -1, 'n_estimators': 10, 'eval_metric': ['ndcg', 'map'],
+                     'objective': 'rank:ndcg', 'verbose': True}
+
+        self.test_model = xgboost.XGBRanker(**param)
+        self.control_model = xgboost.XGBRanker(**param)
+
+    def fit(self, data, y_train, group, eval_data=None):
+        test_mask = group == 'test'
+        control_mask = group == 'control'
+        test = data[test_mask]
+        control = data[control_mask]
+
+        val_X, val_y, val_group = eval_data
+        val_test_mask = val_group == 'test'
+        val_control_mask = val_group == 'control'
+        val_test = val_X[val_test_mask]
+        val_control = val_X[val_control_mask]
+
+        self.test_model.fit(test, y_train[test_mask], [test_mask.sum()],
+                            eval_set=[(val_test, val_y[val_test_mask])],
+                            eval_group=[[val_test_mask.sum()]])
+        self.control_model.fit(control, y_train[control_mask], [control_mask.sum()],
+                               eval_set=[(val_control, val_y[val_control_mask])],
+                               eval_group=[[val_control_mask.sum()]])
 
     def predict(self, data):
         test_ranks = self.test_model.predict(data).reshape(-1, 1)
