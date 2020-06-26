@@ -1,0 +1,130 @@
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.871081	eval_0-map:0.301381
+[1]	eval_0-ndcg:0.871355	eval_0-map:0.305234
+[2]	eval_0-ndcg:0.871406	eval_0-map:0.305434
+[3]	eval_0-ndcg:0.871761	eval_0-map:0.304982
+[4]	eval_0-ndcg:0.878403	eval_0-map:0.325049
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.851613	eval_0-map:0.306691
+[1]	eval_0-ndcg:0.858868	eval_0-map:0.32649
+[2]	eval_0-ndcg:0.858863	eval_0-map:0.331309
+[3]	eval_0-ndcg:0.859195	eval_0-map:0.320661
+[4]	eval_0-ndcg:0.859288	eval_0-map:0.325151
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.871541	eval_0-map:0.304679
+[1]	eval_0-ndcg:0.871867	eval_0-map:0.304587
+[2]	eval_0-ndcg:0.872074	eval_0-map:0.304249
+[3]	eval_0-ndcg:0.872063	eval_0-map:0.304669
+[4]	eval_0-ndcg:0.875782	eval_0-map:0.318119
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.851494	eval_0-map:0.304057
+[1]	eval_0-ndcg:0.86254	eval_0-map:0.320851
+[2]	eval_0-ndcg:0.862721	eval_0-map:0.321954
+[3]	eval_0-ndcg:0.862782	eval_0-map:0.322441
+[4]	eval_0-ndcg:0.8631	eval_0-map:0.324711
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.870809	eval_0-map:0.30161
+[1]	eval_0-ndcg:0.871278	eval_0-map:0.305773
+[2]	eval_0-ndcg:0.871411	eval_0-map:0.310268
+[3]	eval_0-ndcg:0.871447	eval_0-map:0.30748
+[4]	eval_0-ndcg:0.876407	eval_0-map:0.322004
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.850354	eval_0-map:0.292927
+[1]	eval_0-ndcg:0.855503	eval_0-map:0.310043
+[2]	eval_0-ndcg:0.855844	eval_0-map:0.313535
+[3]	eval_0-ndcg:0.855827	eval_0-map:0.315257
+[4]	eval_0-ndcg:0.855969	eval_0-map:0.309986
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.87392	eval_0-map:0.308057
+[1]	eval_0-ndcg:0.874321	eval_0-map:0.309785
+[2]	eval_0-ndcg:0.874357	eval_0-map:0.310768
+[3]	eval_0-ndcg:0.87459	eval_0-map:0.310498
+[4]	eval_0-ndcg:0.879361	eval_0-map:0.326438
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.853749	eval_0-map:0.310137
+[1]	eval_0-ndcg:0.862699	eval_0-map:0.333669
+[2]	eval_0-ndcg:0.862849	eval_0-map:0.337391
+[3]	eval_0-ndcg:0.862837	eval_0-map:0.333027
+[4]	eval_0-ndcg:0.86301	eval_0-map:0.337315
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.871508	eval_0-map:0.3095
+[1]	eval_0-ndcg:0.87174	eval_0-map:0.310099
+[2]	eval_0-ndcg:0.871881	eval_0-map:0.311353
+[3]	eval_0-ndcg:0.871983	eval_0-map:0.313882
+[4]	eval_0-ndcg:0.877549	eval_0-map:0.326846
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.852942	eval_0-map:0.309114
+[1]	eval_0-ndcg:0.86214	eval_0-map:0.32589
+[2]	eval_0-ndcg:0.862336	eval_0-map:0.329487
+[3]	eval_0-ndcg:0.862208	eval_0-map:0.328584
+[4]	eval_0-ndcg:0.863162	eval_0-map:0.333554
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.8716	eval_0-map:0.29997
+[1]	eval_0-ndcg:0.8719	eval_0-map:0.301121
+[2]	eval_0-ndcg:0.871935	eval_0-map:0.300944
+[3]	eval_0-ndcg:0.87195	eval_0-map:0.301007
+[4]	eval_0-ndcg:0.872154	eval_0-map:0.301724
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.851735	eval_0-map:0.29633
+[1]	eval_0-ndcg:0.851951	eval_0-map:0.294951
+[2]	eval_0-ndcg:0.852054	eval_0-map:0.29776
+[3]	eval_0-ndcg:0.852468	eval_0-map:0.299492
+[4]	eval_0-ndcg:0.859671	eval_0-map:0.320722
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.873834	eval_0-map:0.311467
+[1]	eval_0-ndcg:0.874128	eval_0-map:0.31041
+[2]	eval_0-ndcg:0.874188	eval_0-map:0.311898
+[3]	eval_0-ndcg:0.874295	eval_0-map:0.312254
+[4]	eval_0-ndcg:0.874277	eval_0-map:0.312496
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.853047	eval_0-map:0.303658
+[1]	eval_0-ndcg:0.853254	eval_0-map:0.308858
+[2]	eval_0-ndcg:0.858119	eval_0-map:0.325442
+[3]	eval_0-ndcg:0.858805	eval_0-map:0.324407
+[4]	eval_0-ndcg:0.858814	eval_0-map:0.324416
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.871316	eval_0-map:0.307194
+[1]	eval_0-ndcg:0.871557	eval_0-map:0.307699
+[2]	eval_0-ndcg:0.871704	eval_0-map:0.308896
+[3]	eval_0-ndcg:0.871751	eval_0-map:0.310525
+[4]	eval_0-ndcg:0.874783	eval_0-map:0.318491
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.848733	eval_0-map:0.28879
+[1]	eval_0-ndcg:0.857914	eval_0-map:0.311468
+[2]	eval_0-ndcg:0.858732	eval_0-map:0.312097
+[3]	eval_0-ndcg:0.858951	eval_0-map:0.311259
+[4]	eval_0-ndcg:0.864041	eval_0-map:0.323784
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.872455	eval_0-map:0.301257
+[1]	eval_0-ndcg:0.87282	eval_0-map:0.303452
+[2]	eval_0-ndcg:0.87287	eval_0-map:0.303515
+[3]	eval_0-ndcg:0.872871	eval_0-map:0.303534
+[4]	eval_0-ndcg:0.873072	eval_0-map:0.304
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.848489	eval_0-map:0.293824
+[1]	eval_0-ndcg:0.848818	eval_0-map:0.296618
+[2]	eval_0-ndcg:0.856606	eval_0-map:0.32092
+[3]	eval_0-ndcg:0.856719	eval_0-map:0.319144
+[4]	eval_0-ndcg:0.860976	eval_0-map:0.327061
+Обучаем модель на тестовой группе:
+[0]	eval_0-ndcg:0.869988	eval_0-map:0.304213
+[1]	eval_0-ndcg:0.870186	eval_0-map:0.309458
+[2]	eval_0-ndcg:0.870242	eval_0-map:0.305612
+[3]	eval_0-ndcg:0.870322	eval_0-map:0.305852
+[4]	eval_0-ndcg:0.873958	eval_0-map:0.315422
+
+Обучаем модель на контрольной группе:
+[0]	eval_0-ndcg:0.85229	eval_0-map:0.29592
+[1]	eval_0-ndcg:0.85323	eval_0-map:0.299465
+[2]	eval_0-ndcg:0.863558	eval_0-map:0.317819
+[3]	eval_0-ndcg:0.863539	eval_0-map:0.324916
+[4]	eval_0-ndcg:0.863816	eval_0-map:0.323876

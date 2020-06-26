@@ -73,8 +73,11 @@ class StupidModel:
         if param is None:
             param = {'n_jobs': -1, 'n_estimators': 10, 'eval_metric': ['ndcg', 'map'],
                      'objective': 'rank:ndcg', 'verbose': True}
+        elif 'verbose' not in param:
+            param['verbose'] = True
 
         self.test_model = xgboost.XGBRanker(**param)
+        self.param = param
         self.control_model = xgboost.XGBRanker(**param)
 
     def fit(self, data, y_train, group, eval_data=None):
@@ -89,12 +92,18 @@ class StupidModel:
         val_test = val_X[val_test_mask]
         val_control = val_X[val_control_mask]
 
+        if self.param['verbose']:
+            print('Обучаем модель на тестовой группе:')
         self.test_model.fit(test, y_train[test_mask], [test_mask.sum()],
                             eval_set=[(val_test, val_y[val_test_mask])],
-                            eval_group=[[val_test_mask.sum()]])
+                            eval_group=[[val_test_mask.sum()]], verbose = self.param['verbose'])
+        
+        if self.param['verbose']:
+            print('\nОбучаем модель на контрольной группе:')
+        
         self.control_model.fit(control, y_train[control_mask], [control_mask.sum()],
                                eval_set=[(val_control, val_y[val_control_mask])],
-                               eval_group=[[val_control_mask.sum()]])
+                               eval_group=[[val_control_mask.sum()]], verbose = self.param['verbose'])
 
     def predict(self, data):
         test_ranks = self.test_model.predict(data).reshape(-1, 1)
