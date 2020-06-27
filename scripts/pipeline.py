@@ -1,6 +1,6 @@
 import modin.pandas as pd
 import numpy as np
-from .metrics import custom_metric, random_predictions
+from metrics import custom_metric, random_predictions
 from sklearn.model_selection import KFold, train_test_split
 import xgboost
 from sklearn.preprocessing import MinMaxScaler
@@ -42,7 +42,7 @@ def run(data: pd.DataFrame, model, n_splits=4, y_name='response_att', take_top_r
 
 
 def validate_on_holdout(data: pd.DataFrame, model, test_size=0.2, y_name='response_att',
-                        take_top_ratio=0.25):
+                        take_top_ratio=0.25, verbose=False):
     """
     :param data: данные
     :param model: ранжирующая модель с fit и predict
@@ -58,28 +58,39 @@ def validate_on_holdout(data: pd.DataFrame, model, test_size=0.2, y_name='respon
               eval_data=(test.drop(['group', y_name], axis=1), test[y_name], test['group']))
 
     train['uplift'] = model.predict(train.drop([y_name, 'group'], axis=1))
-    test['uplift'] = model.predict(test.drop([y_name, 'group'], axis=1))
+    test['uplift'], scaled_test, scaled_control = model.predict(test.drop([y_name, 'group'], axis=1), verbose=True)
 
     train_score, test_score = custom_metric(train, take_top_ratio), custom_metric(test, take_top_ratio)
     train_random, test_random = random_predictions(train, 3, take_top_ratio), \
                                 random_predictions(test, 3, take_top_ratio)
     scores = {'train': train_score, 'test': test_score, 'train_random':
         train_random, 'test_random': test_random}
-    return scores, model
+    if not verbose:
+        return scores, model
+    else:
+        return scores, model, scaled_test, scaled_control, test['uplift']
 
 
 class StupidModel:
-    def __init__(self, param=None, blend_type='multiply'):
+    def __init__(self, param=None, blend_type='multiply', scale=True, test_model=None, control_model=None,
+                ranking=True):
         if param is None:
             param = {'n_jobs': -1, 'n_estimators': 10, 'eval_metric': ['ndcg', 'map'],
                      'objective': 'rank:ndcg', 'verbose': True}
         elif 'verbose' not in param:
             param['verbose'] = True
 
-        self.test_model = xgboost.XGBRanker(**param)
+        self.test_model = test_model
+        self.control_model = control_model
+            
+        if self.test_model is None:
+            self.test_model = xgboost.XGBRanker(**param)
         self.param = param
-        self.control_model = xgboost.XGBRanker(**param)
+        if self.control_model is None:
+            self.control_model = xgboost.XGBRanker(**param)
         self.blend_type = blend_type
+        self.scale = scale
+        self.ranking = ranking
 
     def fit(self, data, y_train, group, eval_data=None):
         test_mask = group == 'test'
@@ -95,28 +106,52 @@ class StupidModel:
 
         if self.param['verbose']:
             print('Обучаем модель на тестовой группе:')
-        self.test_model.fit(test, y_train[test_mask], [test_mask.sum()],
-                            eval_set=[(val_test, val_y[val_test_mask])],
-                            eval_group=[[val_test_mask.sum()]], verbose = self.param['verbose'])
+        if self.ranking:
+            self.test_model.fit(test, y_train[test_mask], [test_mask.sum()],
+                                eval_set=[(val_test, val_y[val_test_mask])],
+                                eval_group=[[val_test_mask.sum()]], verbose = self.param['verbose'])
+        else:
+            self.test_model.fit(test, y_train[test_mask],
+                                eval_set=[(val_test, val_y[val_test_mask])],
+                                verbose = self.param['verbose'])
         
         if self.param['verbose']:
             print('\nОбучаем модель на контрольной группе:')
         
-        self.control_model.fit(control, y_train[control_mask], [control_mask.sum()],
-                               eval_set=[(val_control, val_y[val_control_mask])],
-                               eval_group=[[val_control_mask.sum()]], verbose = self.param['verbose'])
+        if self.ranking:
+            self.control_model.fit(control, y_train[control_mask], [control_mask.sum()],
+                                   eval_set=[(val_control, val_y[val_control_mask])],
+                                   eval_group=[[val_control_mask.sum()]], verbose = self.param['verbose'])
+        else:
+            self.control_model.fit(control, y_train[control_mask],
+                                   eval_set=[(val_control, val_y[val_control_mask])],
+                                   verbose = self.param['verbose'])
 
-    def predict(self, data):
-        test_ranks = self.test_model.predict(data).reshape(-1, 1)
-        control_ranks = self.control_model.predict(data).reshape(-1, 1)
+    def predict(self, data, verbose=False):
+        if self.ranking:
+            test_ranks = self.test_model.predict(data)
+            control_ranks = self.control_model.predict(data)
+        else:
+            test_ranks = self.test_model.predict_proba(data)[:,1]
+            control_ranks = self.control_model.predict_proba(data)[:,1]
         scaler = MinMaxScaler()
-        scaled_test = scaler.fit_transform(test_ranks)
-        scaled_control = scaler.fit_transform(control_ranks)
+        if self.scale:
+            scaled_test = scaler.fit_transform(test_ranks.reshape(-1, 1))
+            scaled_control = scaler.fit_transform(control_ranks.reshape(-1, 1))
+        else:
+            scaled_test = test_ranks
+            scaled_control = control_ranks
+        
         if self.blend_type == 'multiply':
-            return scaled_test * (1 - scaled_control)
+            res = scaled_test * (1 - scaled_control)
         elif self.blend_type == 'subtract':
-            return scaled_test - scaled_control
+            res = scaled_test - scaled_control
         elif self.blend_type == 'divide':
-            return scaled_test / scaled_control
+            res = scaled_test / scaled_control
         else:
             raise ValueError('Беда с типом!')
+        
+        if verbose:
+            return res, scaled_test, scaled_control
+        else:
+            return res
