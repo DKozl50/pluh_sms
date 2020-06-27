@@ -69,7 +69,7 @@ def validate_on_holdout(data: pd.DataFrame, model, test_size=0.2, y_name='respon
 
 
 class StupidModel:
-    def __init__(self, param=None):
+    def __init__(self, param=None, blend_type='multiply'):
         if param is None:
             param = {'n_jobs': -1, 'n_estimators': 10, 'eval_metric': ['ndcg', 'map'],
                      'objective': 'rank:ndcg', 'verbose': True}
@@ -79,6 +79,7 @@ class StupidModel:
         self.test_model = xgboost.XGBRanker(**param)
         self.param = param
         self.control_model = xgboost.XGBRanker(**param)
+        self.blend_type = blend_type
 
     def fit(self, data, y_train, group, eval_data=None):
         test_mask = group == 'test'
@@ -111,4 +112,11 @@ class StupidModel:
         scaler = MinMaxScaler()
         scaled_test = scaler.fit_transform(test_ranks)
         scaled_control = scaler.fit_transform(control_ranks)
-        return scaled_test - scaled_control
+        if self.blend_type == 'multiply':
+            return scaled_test * (1 - scaled_control)
+        elif self.blend_type == 'subtract':
+            return scaled_test - scaled_control
+        elif self.blend_type == 'divide':
+            return scaled_test / scaled_control
+        else:
+            raise ValueError('Беда с типом!')
