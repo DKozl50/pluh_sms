@@ -296,6 +296,11 @@ class SemiStackedModel:
         top_mat_train = np.array(top_feats_train).reshape(-1, len(self.models))
         top_mat_test = np.array(top_feats_test).reshape(-1, len(self.models))
         
+        print(X_train.shape, X_test.shape)
+        print(np.array(top_feats_train).shape)
+        print(np.array(top_feats_test).shape)
+        print(top_mat_train.shape, y_train.shape, top_mat_test.shape, y_test.shape)
+        
         self.top_model.fit(top_mat_train, y_train)
         acc = accuracy_score(y_test, self.top_model.predict(top_mat_test))
         auc = roc_auc_score(y_test, self.top_model.predict_proba(top_mat_test), multi_class='ovr')
