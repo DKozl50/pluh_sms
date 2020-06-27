@@ -2,8 +2,10 @@
 
 {% block content %}
 <div class = "container">
-	<div class = "row" style = "background-color: red">
+	<div class = "row">
+		Смотрим для пользователя: {{ id }}
 		<div class = "col-10 col-sm-12">
+			Сюда подключаем из ада данные:
 			{% include 'gen/graph.html' %}
 		</div>
 	</div>

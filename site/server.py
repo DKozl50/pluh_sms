@@ -16,5 +16,12 @@ def graph():
     fig.write_html("templates/gen/graph.html")
     return redirect(url_for('main'))
 
+@app.route('/search')
+def search_get():
+    id = request.args.get('id')
+    if not id:
+        return redirect(url_for('main'))
+    return render_template("search.html", id = id)
+
 if __name__ == "__main__":
     app.run(debug = True)
