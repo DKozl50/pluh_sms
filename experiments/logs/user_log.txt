@@ -1,0 +1,126 @@
+Traceback (most recent call last):
+  File "<ipython-input-99-1c26202e6931>", line 3, in <module>
+    model = logs.register_model(model_name='first-model', model_path='first-model.joblib')
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/core/run.py", line 2035, in register_model
+    sample_output_dataset=sample_output_dataset, resource_configuration=resource_configuration, **kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/_run_impl/run_history_facade.py", line 425, in register_model
+    See https://aka.ms/run-logging for more details.""".format(model_path, str(run_files)))
+azureml.exceptions._azureml_exception.ModelPathNotFoundException: ModelPathNotFoundException:
+	Message: Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']
+                See https://aka.ms/run-logging for more details.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "message": "Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']\n                See https://aka.ms/run-logging for more details."
+    }
+}
+
+Traceback (most recent call last):
+  File "<ipython-input-100-83494435a6c5>", line 3, in <module>
+    model = logs.register_model(model_name='first-model', model_path='./first-model.joblib')
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/core/run.py", line 2035, in register_model
+    sample_output_dataset=sample_output_dataset, resource_configuration=resource_configuration, **kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/_run_impl/run_history_facade.py", line 425, in register_model
+    See https://aka.ms/run-logging for more details.""".format(model_path, str(run_files)))
+azureml.exceptions._azureml_exception.ModelPathNotFoundException: ModelPathNotFoundException:
+	Message: Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']
+                See https://aka.ms/run-logging for more details.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "message": "Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']\n                See https://aka.ms/run-logging for more details."
+    }
+}
+
+Traceback (most recent call last):
+  File "<ipython-input-102-f76a4dabc13b>", line 3, in <module>
+    model = logs.register_model(model_name='first-model', model_path='../first-model.joblib')
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/core/run.py", line 2035, in register_model
+    sample_output_dataset=sample_output_dataset, resource_configuration=resource_configuration, **kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/_run_impl/run_history_facade.py", line 425, in register_model
+    See https://aka.ms/run-logging for more details.""".format(model_path, str(run_files)))
+azureml.exceptions._azureml_exception.ModelPathNotFoundException: ModelPathNotFoundException:
+	Message: Could not locate the provided model_path ../first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']
+                See https://aka.ms/run-logging for more details.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "message": "Could not locate the provided model_path ../first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']\n                See https://aka.ms/run-logging for more details."
+    }
+}
+
+Traceback (most recent call last):
+  File "<ipython-input-103-c1c8392ed3ad>", line 3, in <module>
+    model = logs.register_model(model_name='first-model', model_path='../../first-model.joblib')
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/core/run.py", line 2035, in register_model
+    sample_output_dataset=sample_output_dataset, resource_configuration=resource_configuration, **kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/_run_impl/run_history_facade.py", line 425, in register_model
+    See https://aka.ms/run-logging for more details.""".format(model_path, str(run_files)))
+azureml.exceptions._azureml_exception.ModelPathNotFoundException: ModelPathNotFoundException:
+	Message: Could not locate the provided model_path ../../first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']
+                See https://aka.ms/run-logging for more details.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "message": "Could not locate the provided model_path ../../first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']\n                See https://aka.ms/run-logging for more details."
+    }
+}
+
+Traceback (most recent call last):
+  File "<ipython-input-104-63b74129d1ed>", line 4, in <module>
+    model = logs.register_model(model_name='first-model', model_path='first-model.joblib')
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/core/run.py", line 2035, in register_model
+    sample_output_dataset=sample_output_dataset, resource_configuration=resource_configuration, **kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/_run_impl/run_history_facade.py", line 425, in register_model
+    See https://aka.ms/run-logging for more details.""".format(model_path, str(run_files)))
+azureml.exceptions._azureml_exception.ModelPathNotFoundException: ModelPathNotFoundException:
+	Message: Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']
+                See https://aka.ms/run-logging for more details.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "message": "Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']\n                See https://aka.ms/run-logging for more details."
+    }
+}
+
+Traceback (most recent call last):
+  File "<ipython-input-105-1c26202e6931>", line 3, in <module>
+    model = logs.register_model(model_name='first-model', model_path='first-model.joblib')
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/core/run.py", line 2035, in register_model
+    sample_output_dataset=sample_output_dataset, resource_configuration=resource_configuration, **kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/_run_impl/run_history_facade.py", line 425, in register_model
+    See https://aka.ms/run-logging for more details.""".format(model_path, str(run_files)))
+azureml.exceptions._azureml_exception.ModelPathNotFoundException: ModelPathNotFoundException:
+	Message: Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']
+                See https://aka.ms/run-logging for more details.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "message": "Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']\n                See https://aka.ms/run-logging for more details."
+    }
+}
+
+Traceback (most recent call last):
+  File "<ipython-input-107-1c26202e6931>", line 3, in <module>
+    model = logs.register_model(model_name='first-model', model_path='first-model.joblib')
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/core/run.py", line 2035, in register_model
+    sample_output_dataset=sample_output_dataset, resource_configuration=resource_configuration, **kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/_run_impl/run_history_facade.py", line 425, in register_model
+    See https://aka.ms/run-logging for more details.""".format(model_path, str(run_files)))
+azureml.exceptions._azureml_exception.ModelPathNotFoundException: ModelPathNotFoundException:
+	Message: Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']
+                See https://aka.ms/run-logging for more details.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "message": "Could not locate the provided model_path first-model.joblib in the set of files uploaded to the run: ['logs/user_log.txt']\n                See https://aka.ms/run-logging for more details."
+    }
+}
+
