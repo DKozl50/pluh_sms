@@ -7,6 +7,14 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import ndcg_score, accuracy_score, roc_auc_score
 
 
+def importances(train, model):
+    cols = list(train.columns)
+
+    feats = pd.Series(data=model.feature_importances_, index=cols) 
+    feats.sort_values(ascending=False, inplace=True)
+    return feats[feats != 0]
+    
+
 def run(data: pd.DataFrame, model, n_splits=4, y_name='response_att', take_top_ratio=0.25):
     """
     :param data: данные
@@ -53,7 +61,7 @@ def validate_on_holdout(data: pd.DataFrame, model, test_size=0.2, y_name='respon
     """
 
     train, test = train_test_split(data, test_size=test_size, stratify=data['group'],
-                                   shuffle=True)
+                                   shuffle=True, random_state=42)
     model.fit(train, test)
 
     train['uplift'] = model.predict(train.drop([y_name, 'group'], axis=1))
@@ -352,7 +360,7 @@ class BlendedModel:
         top_feats_train = []
         top_feats_test = []
         for name, model in self.models.items():
-            model.fit(X_train, y_train)
+            model.fit(X_train, y_train, eval_set=[(X_train, y_train), (X_test, y_test)])
             acc = accuracy_score(y_test, model.predict(X_test))
             auc = roc_auc_score(y_test, model.predict_proba(X_test), multi_class='ovr')
             print('\n' + name + f'\nТочность: {acc}\nROC AUC: {auc}')
