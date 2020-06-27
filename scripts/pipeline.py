@@ -155,3 +155,47 @@ class StupidModel:
             return res, scaled_test, scaled_control
         else:
             return res
+
+
+class IndianModel:
+    def __init__(self, param=None, model=None):
+        if param is None:
+            param = {'n_jobs': -1, 'n_estimators': 10, 'eval_metric': ['ndcg', 'map'],
+                     'objective': 'rank:ndcg', 'verbose': True}
+        elif 'verbose' not in param:
+            param['verbose'] = True
+
+        self.model = model
+
+        if self.model is None:
+            self.model = xgboost.XGBClassifier(**param)
+        self.param = param
+
+    def fit(self, data, eval_data=None):
+        """
+        В дате должны быть столбцы group и response_att
+        """
+
+        data['class'] = 0
+        data.loc[(data['group'] == 'control') & (data['response_att'] == 1), 'class'] = 1
+        data.loc[(data['group'] == 'test') & (data['response_att'] == 0), 'class'] = 2
+        data.loc[(data['group'] == 'test') & (data['response_att'] == 1), 'class'] = 3
+
+        eval_data['class'] = 0
+        eval_data.loc[(eval_data['group'] == 'control') & (eval_data['response_att'] == 1), 'class'] = 1
+        eval_data.loc[(eval_data['group'] == 'test') & (eval_data['response_att'] == 0), 'class'] = 2
+        eval_data.loc[(eval_data['group'] == 'test') & (eval_data['response_att'] == 1), 'class'] = 3
+
+        y_train, y_test = data['class'], eval_data['class']
+        X_train = data.drop(['class', 'group', 'response_att'], axis=1)
+        X_test = eval_data.drop(['class', 'group', 'response_att'], axis=1)
+        self.model.fit(X_train, y_train, eval_set=(X_test, y_test), verbose=True)
+
+    def predict(self, data, verbose=False):
+        assert ({'class', 'response_att', 'group'}.intersection(set(data.columns)) == {}), "Oops!"
+        pred = self.model.predict_proba(data)
+        final = pred[:, 3] + pred[:, 0] - pred[:, 1] - pred[:, 2]
+        if verbose:
+            return final, pred
+        else:
+            return final
