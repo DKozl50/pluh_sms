@@ -60,10 +60,7 @@ def validate_on_holdout(data: pd.DataFrame, model, test_size=0.2, y_name='respon
     test['uplift'], logs = model.predict(test.drop([y_name, 'group'], axis=1), verbose=True)
 
     train_score, test_score = custom_metric(train, take_top_ratio), custom_metric(test, take_top_ratio)
-    train_random, test_random = random_predictions(train, 3, take_top_ratio), \
-                                random_predictions(test, 3, take_top_ratio)
-    scores = {'train': train_score, 'test': test_score, 'train_random':
-        train_random, 'test_random': test_random}
+    scores = {'train': train_score, 'test': test_score}
     if not verbose:
         return scores, model
     else:
@@ -293,13 +290,9 @@ class SemiStackedModel:
             top_feats_train.append(model.predict_proba(X_train))
             top_feats_test.append(model.predict_proba(X_test))
             
-        top_mat_train = np.array(top_feats_train).reshape(-1, len(self.models))
-        top_mat_test = np.array(top_feats_test).reshape(-1, len(self.models))
+        top_mat_train = np.hstack(top_feats_train)
+        top_mat_test = np.hstack(top_feats_test)
         
-        print(X_train.shape, X_test.shape)
-        print(np.array(top_feats_train).shape)
-        print(np.array(top_feats_test).shape)
-        print(top_mat_train.shape, y_train.shape, top_mat_test.shape, y_test.shape)
         
         self.top_model.fit(top_mat_train, y_train)
         acc = accuracy_score(y_test, self.top_model.predict(top_mat_test))
@@ -320,11 +313,78 @@ class SemiStackedModel:
             pass
         
         preds = []
-        for name, model in self.models:
+        for name, model in self.models.items():
             pred = model.predict_proba(data)
             preds.append(pred)
-        top_matrix = np.array(preds).reshape(-1, len(self.models))
+        top_matrix = np.array(preds).reshape(-1, len(self.models) * 4)
         pred = self.top_model.predict_proba(top_matrix)
+        
+        final = pred[:, 3] + pred[:, 0] - pred[:, 1] - pred[:, 2]
+        
+        if verbose:
+            return final, pred
+        else:
+            return final        
+        
+        
+class BlendedModel:
+    def __init__(self, models):
+        self.models = models
+
+    def fit(self, data, eval_data=None):
+        """
+        В дате должны быть столбцы group и response_att
+        """
+
+        data['class'] = 0
+        data.loc[(data['group'] == 'control') & (data['response_att'] == 1), 'class'] = 1
+        data.loc[(data['group'] == 'test') & (data['response_att'] == 0), 'class'] = 2
+        data.loc[(data['group'] == 'test') & (data['response_att'] == 1), 'class'] = 3
+
+        eval_data['class'] = 0
+        eval_data.loc[(eval_data['group'] == 'control') & (eval_data['response_att'] == 1), 'class'] = 1
+        eval_data.loc[(eval_data['group'] == 'test') & (eval_data['response_att'] == 0), 'class'] = 2
+        eval_data.loc[(eval_data['group'] == 'test') & (eval_data['response_att'] == 1), 'class'] = 3
+
+        y_train, y_test = data['class'].values, eval_data['class'].values
+        X_train = data.drop(['class', 'group', 'response_att'], axis=1).values
+        X_test = eval_data.drop(['class', 'group', 'response_att'], axis=1).values
+        top_feats_train = []
+        top_feats_test = []
+        for name, model in self.models.items():
+            model.fit(X_train, y_train)
+            acc = accuracy_score(y_test, model.predict(X_test))
+            auc = roc_auc_score(y_test, model.predict_proba(X_test), multi_class='ovr')
+            print('\n' + name + f'\nТочность: {acc}\nROC AUC: {auc}')
+            top_feats_train.append(model.predict_proba(X_train))
+            top_feats_test.append(model.predict_proba(X_test))
+            
+        train_proba = sum(top_feats_train) / len(top_feats_train)
+        test_proba = sum(top_feats_test) / len(top_feats_test)       
+        
+        #acc = accuracy_score(y_test, test_proba)
+        auc = roc_auc_score(y_test, test_proba, multi_class='ovr')
+        print(f'\nМодель верхнего уровня \nROC AUC: {auc}')
+        
+        data.drop('class', axis=1, inplace=True)
+        eval_data.drop('class', axis=1, inplace=True)
+
+    def predict(self, data, verbose=False):
+        if type(data) == pd.DataFrame:
+            assert {'class', 'response_att', 'group'}.intersection(set(data.columns)) == set(), "Oops!"
+            data = data.values
+            print('here')
+        try:
+            data = data.values
+        except:
+            pass
+        
+        preds = []
+        for name, model in self.models.items():
+            pred = model.predict_proba(data)
+            preds.append(pred)
+        
+        pred = sum(preds) / len(preds)
         
         final = pred[:, 3] + pred[:, 0] - pred[:, 1] - pred[:, 2]
         
