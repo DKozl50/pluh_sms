@@ -7,7 +7,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template("index.html")
+    return render_template("index.html", type = "-")
+
+@app.route('/first_analysis')
+def mitya():
+    return render_template("mitya.html", type = "mitya")
 
 @app.route('/graph')
 def graph():
@@ -27,7 +31,7 @@ def search_get():
     id = request.args.get('id')
     if not id:
         return redirect(url_for('main'))
-    return render_template("search.html", id = id)
+    return render_template("search.html", id = id, type = "-")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug = True)
