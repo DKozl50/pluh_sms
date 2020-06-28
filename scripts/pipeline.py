@@ -5,6 +5,7 @@ from sklearn.model_selection import KFold, train_test_split
 import xgboost
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import ndcg_score, accuracy_score, roc_auc_score
+from sklearn.linear_model import LogisticRegression
 
 
 def importances(train, model):
@@ -437,3 +438,77 @@ def night_preprocess(data):
     
     new_cols = list(set(data.columns).difference(cols_now))
     return new_cols
+
+
+class ExperimentalModel:
+    def __init__(self, models, verbose=True):
+        self.models = models
+        self.verbose = verbose
+
+    def fit(self, data, eval_data=None):
+        """
+        В дате должны быть столбцы group и response_att
+        """
+
+        data.loc[(data['group'] == 'control') & (data['response_att'] == 1), 'class'] = 1
+        data.loc[(data['group'] == 'control') & (data['response_att'] == 0), 'class'] = 0
+        data.loc[(data['group'] == 'test') & (data['response_att'] == 0), 'class'] = 1
+        data.loc[(data['group'] == 'test') & (data['response_att'] == 1), 'class'] = 0
+
+        eval_data.loc[(eval_data['group'] == 'control') & (eval_data['response_att'] == 1), 'class'] = 1
+        eval_data.loc[(eval_data['group'] == 'control') & (eval_data['response_att'] == 0), 'class'] = 0
+        eval_data.loc[(eval_data['group'] == 'test') & (eval_data['response_att'] == 0), 'class'] = 1
+        eval_data.loc[(eval_data['group'] == 'test') & (eval_data['response_att'] == 1), 'class'] = 0
+
+        y_train, y_test = data['class'].values, eval_data['class'].values
+        X_train = data.drop(['class', 'group', 'response_att'], axis=1).values
+        X_test = eval_data.drop(['class', 'group', 'response_att'], axis=1).values
+        top_feats_train = []
+        top_feats_test = []
+        for name, model in self.models.items():
+            if self.verbose:
+                model.fit(X_train, y_train, eval_set=[(X_train, y_train), (X_test, y_test)])
+            else:
+                model.fit(X_train, y_train)
+            #acc = accuracy_score(y_test, model.predict(X_test))
+            #auc = roc_auc_score(y_test, model.predict_proba(X_test))
+            #print('\n' + name + f'\nТочность: {acc}\nROC AUC: {auc}')
+            top_feats_train.append(model.predict_proba(X_train))
+            top_feats_test.append(model.predict_proba(X_test))
+            
+        train_proba = sum(top_feats_train) / len(top_feats_train)
+        test_proba = sum(top_feats_test) / len(top_feats_test)       
+                                                      
+        
+        #acc = accuracy_score(y_test, test_proba)
+        #auc = roc_auc_score(y_test, test_proba)
+        #print(f'\nМодель верхнего уровня \nROC AUC: {auc}')
+        
+        data.drop('class', axis=1, inplace=True)
+        eval_data.drop('class', axis=1, inplace=True)
+
+    def predict(self, data, verbose=False):
+        if type(data) == pd.DataFrame:
+            assert {'class', 'response_att', 'group'}.intersection(set(data.columns)) == set(), "Oops!"
+            data = data.values
+            print('here')
+        try:
+            data = data.values
+        except:
+            pass
+        
+        preds = []
+        for name, model in self.models.items():
+            pred = model.predict_proba(data)
+            preds.append(pred)
+        
+        pred = sum(preds) / len(preds)
+        
+        final = pred[:,0] - pred[:,1]
+        
+        if verbose:
+            return final, pred
+        else:
+            return final        
+        
+        

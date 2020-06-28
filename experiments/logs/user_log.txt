@@ -5296,3 +5296,635 @@ ROC AUC: 0.6885220515186329
 
 Модель верхнего уровня 
 ROC AUC: 0.6892024732278255
+[0]	validation_0-mlogloss:1.04703	validation_1-mlogloss:1.04928
+[1]	validation_0-mlogloss:1.00865	validation_1-mlogloss:1.00761
+[2]	validation_0-mlogloss:0.972181	validation_1-mlogloss:0.972179
+[3]	validation_0-mlogloss:0.942028	validation_1-mlogloss:0.941983
+[4]	validation_0-mlogloss:0.915898	validation_1-mlogloss:0.916124
+[5]	validation_0-mlogloss:0.892397	validation_1-mlogloss:0.893803
+[6]	validation_0-mlogloss:0.87373	validation_1-mlogloss:0.874419
+[7]	validation_0-mlogloss:0.857483	validation_1-mlogloss:0.857836
+[8]	validation_0-mlogloss:0.842563	validation_1-mlogloss:0.843378
+[9]	validation_0-mlogloss:0.829966	validation_1-mlogloss:0.830901
+
+1
+Точность: 0.7052603234211025
+ROC AUC: 0.6521492341805059
+[0]	validation_0-mlogloss:1.04675	validation_1-mlogloss:1.0493
+[1]	validation_0-mlogloss:1.00837	validation_1-mlogloss:1.0077
+[2]	validation_0-mlogloss:0.972417	validation_1-mlogloss:0.972493
+[3]	validation_0-mlogloss:0.942227	validation_1-mlogloss:0.94216
+[4]	validation_0-mlogloss:0.916142	validation_1-mlogloss:0.916227
+[5]	validation_0-mlogloss:0.892706	validation_1-mlogloss:0.893884
+[6]	validation_0-mlogloss:0.873912	validation_1-mlogloss:0.874674
+[7]	validation_0-mlogloss:0.857606	validation_1-mlogloss:0.857996
+[8]	validation_0-mlogloss:0.842585	validation_1-mlogloss:0.843618
+[9]	validation_0-mlogloss:0.830006	validation_1-mlogloss:0.830965
+
+2
+Точность: 0.7050638254515814
+ROC AUC: 0.652417139301179
+[0]	validation_0-mlogloss:1.04707	validation_1-mlogloss:1.04942
+[1]	validation_0-mlogloss:1.00851	validation_1-mlogloss:1.00783
+[2]	validation_0-mlogloss:0.971958	validation_1-mlogloss:0.972321
+[3]	validation_0-mlogloss:0.942111	validation_1-mlogloss:0.941945
+[4]	validation_0-mlogloss:0.915857	validation_1-mlogloss:0.916191
+[5]	validation_0-mlogloss:0.892671	validation_1-mlogloss:0.893886
+[6]	validation_0-mlogloss:0.873955	validation_1-mlogloss:0.874723
+[7]	validation_0-mlogloss:0.85765	validation_1-mlogloss:0.858017
+[8]	validation_0-mlogloss:0.842718	validation_1-mlogloss:0.84356
+[9]	validation_0-mlogloss:0.830048	validation_1-mlogloss:0.83107
+
+3
+Точность: 0.7050492700464317
+ROC AUC: 0.6525695589084376
+[0]	validation_0-mlogloss:1.04713	validation_1-mlogloss:1.04932
+[1]	validation_0-mlogloss:1.00843	validation_1-mlogloss:1.00743
+[2]	validation_0-mlogloss:0.97215	validation_1-mlogloss:0.972386
+[3]	validation_0-mlogloss:0.941859	validation_1-mlogloss:0.94216
+[4]	validation_0-mlogloss:0.915939	validation_1-mlogloss:0.916204
+[5]	validation_0-mlogloss:0.89248	validation_1-mlogloss:0.893886
+[6]	validation_0-mlogloss:0.873966	validation_1-mlogloss:0.874685
+[7]	validation_0-mlogloss:0.857605	validation_1-mlogloss:0.858049
+[8]	validation_0-mlogloss:0.842675	validation_1-mlogloss:0.843588
+[9]	validation_0-mlogloss:0.829996	validation_1-mlogloss:0.831083
+
+4
+Точность: 0.7048309389691862
+ROC AUC: 0.6521329422973544
+
+Модель верхнего уровня 
+ROC AUC: 0.6529413338622442
+[0]	validation_0-mlogloss:1.04703	validation_1-mlogloss:1.04928
+[1]	validation_0-mlogloss:1.00865	validation_1-mlogloss:1.00761
+[2]	validation_0-mlogloss:0.972181	validation_1-mlogloss:0.972179
+[3]	validation_0-mlogloss:0.942028	validation_1-mlogloss:0.941983
+[4]	validation_0-mlogloss:0.915898	validation_1-mlogloss:0.916124
+[5]	validation_0-mlogloss:0.892397	validation_1-mlogloss:0.893803
+[6]	validation_0-mlogloss:0.87373	validation_1-mlogloss:0.874419
+[7]	validation_0-mlogloss:0.857483	validation_1-mlogloss:0.857836
+[8]	validation_0-mlogloss:0.842563	validation_1-mlogloss:0.843378
+[9]	validation_0-mlogloss:0.829966	validation_1-mlogloss:0.830901
+
+1
+Точность: 0.7052603234211025
+ROC AUC: 0.6521492341805059
+[0]	validation_0-mlogloss:1.04675	validation_1-mlogloss:1.0493
+[1]	validation_0-mlogloss:1.00837	validation_1-mlogloss:1.0077
+[2]	validation_0-mlogloss:0.972417	validation_1-mlogloss:0.972493
+[3]	validation_0-mlogloss:0.942227	validation_1-mlogloss:0.94216
+[4]	validation_0-mlogloss:0.916142	validation_1-mlogloss:0.916227
+[5]	validation_0-mlogloss:0.892706	validation_1-mlogloss:0.893884
+[6]	validation_0-mlogloss:0.873912	validation_1-mlogloss:0.874674
+[7]	validation_0-mlogloss:0.857606	validation_1-mlogloss:0.857996
+[8]	validation_0-mlogloss:0.842585	validation_1-mlogloss:0.843618
+[9]	validation_0-mlogloss:0.830006	validation_1-mlogloss:0.830965
+
+2
+Точность: 0.7050638254515814
+ROC AUC: 0.652417139301179
+[0]	validation_0-mlogloss:1.04707	validation_1-mlogloss:1.04942
+[1]	validation_0-mlogloss:1.00851	validation_1-mlogloss:1.00783
+[2]	validation_0-mlogloss:0.971958	validation_1-mlogloss:0.972321
+[3]	validation_0-mlogloss:0.942111	validation_1-mlogloss:0.941945
+[4]	validation_0-mlogloss:0.915857	validation_1-mlogloss:0.916191
+[5]	validation_0-mlogloss:0.892671	validation_1-mlogloss:0.893886
+[6]	validation_0-mlogloss:0.873955	validation_1-mlogloss:0.874723
+[7]	validation_0-mlogloss:0.85765	validation_1-mlogloss:0.858017
+[8]	validation_0-mlogloss:0.842718	validation_1-mlogloss:0.84356
+[9]	validation_0-mlogloss:0.830048	validation_1-mlogloss:0.83107
+
+3
+Точность: 0.7050492700464317
+ROC AUC: 0.6525695589084376
+Traceback (most recent call last):
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/ops/array_ops.py", line 274, in na_logical_op
+    result = op(x, y)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/ops/roperator.py", line 56, in ror_
+    return operator.or_(right, left)
+TypeError: ufunc 'bitwise_or' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/ops/array_ops.py", line 288, in na_logical_op
+    result = libops.scalar_binop(x, y, op)
+  File "pandas/_libs/ops.pyx", line 169, in pandas._libs.ops.scalar_binop
+ValueError: Buffer dtype mismatch, expected 'Python object' but got 'double'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<ipython-input-97-a83b777d5709>", line 24, in <module>
+    res = validate_on_holdout(train, model, verbose=True)
+  File "../scripts/pipeline.py", line 66, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 484, in fit
+    eval_data.loc[eval_data['class'] == 0 | eval_data['class'] == 1, 'top_class'] = 1
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/ops/common.py", line 64, in new_method
+    return method(self, other)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/ops/__init__.py", line 552, in wrapper
+    res_values = logical_op(lvalues, rvalues, op)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/ops/array_ops.py", line 366, in logical_op
+    res_values = na_logical_op(lvalues, rvalues, op)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/ops/array_ops.py", line 298, in na_logical_op
+    f"Cannot perform '{op.__name__}' with a dtyped [{x.dtype}] array "
+TypeError: Cannot perform 'ror_' with a dtyped [float64] array and scalar of type [bool]
+
+[0]	validation_0-mlogloss:1.04703	validation_1-mlogloss:1.04928
+[1]	validation_0-mlogloss:1.00865	validation_1-mlogloss:1.00761
+[2]	validation_0-mlogloss:0.972181	validation_1-mlogloss:0.972179
+[3]	validation_0-mlogloss:0.942028	validation_1-mlogloss:0.941983
+[4]	validation_0-mlogloss:0.915898	validation_1-mlogloss:0.916124
+[5]	validation_0-mlogloss:0.892397	validation_1-mlogloss:0.893803
+[6]	validation_0-mlogloss:0.87373	validation_1-mlogloss:0.874419
+[7]	validation_0-mlogloss:0.857483	validation_1-mlogloss:0.857836
+[8]	validation_0-mlogloss:0.842563	validation_1-mlogloss:0.843378
+[9]	validation_0-mlogloss:0.829966	validation_1-mlogloss:0.830901
+
+1
+Точность: 0.7052603234211025
+ROC AUC: 0.6521492341805059
+Traceback (most recent call last):
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexing.py", line 657, in _get_setitem_indexer
+    return self._convert_to_indexer(key, axis=axis)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexing.py", line 1732, in _convert_to_indexer
+    return self._get_listlike_indexer(obj, axis, raise_missing=True)[1]
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexing.py", line 1547, in _get_listlike_indexer
+    indexer = ax.get_indexer_for(key)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4501, in get_indexer_for
+    return self.get_indexer(target, **kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 2729, in get_indexer
+    target, method=method, limit=limit, tolerance=tolerance
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 2753, in get_indexer
+    indexer = self._engine.get_indexer(target._ndarray_values)
+  File "pandas/_libs/index.pyx", line 287, in pandas._libs.index.IndexEngine.get_indexer
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1668, in pandas._libs.hashtable.PyObjectHashTable.lookup
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/generic.py", line 1799, in __hash__
+    f"{repr(type(self).__name__)} objects are mutable, "
+TypeError: 'Series' objects are mutable, thus they cannot be hashed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<ipython-input-99-6bda7b6b8b40>", line 24, in <module>
+    res = validate_on_holdout(train, model, verbose=True)
+  File "../scripts/pipeline.py", line 66, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 484, in fit
+    data.loc[(eval_data['class'] == 0) | (eval_data['class'] == 1), 'top_class'] = 1
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexing.py", line 670, in __setitem__
+    indexer = self._get_setitem_indexer(key)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexing.py", line 663, in _get_setitem_indexer
+    raise IndexingError(key)
+pandas.core.indexing.IndexingError: (320878    False
+551188    False
+487931     True
+585354    False
+559082    False
+          ...  
+481803    False
+564319    False
+622391     True
+392542    False
+297938    False
+Name: class, Length: 137406, dtype: bool, 'top_class')
+
+[0]	validation_0-mlogloss:1.04703	validation_1-mlogloss:1.04928
+[1]	validation_0-mlogloss:1.00865	validation_1-mlogloss:1.00761
+[2]	validation_0-mlogloss:0.972181	validation_1-mlogloss:0.972179
+[3]	validation_0-mlogloss:0.942028	validation_1-mlogloss:0.941983
+[4]	validation_0-mlogloss:0.915898	validation_1-mlogloss:0.916124
+[5]	validation_0-mlogloss:0.892397	validation_1-mlogloss:0.893803
+[6]	validation_0-mlogloss:0.87373	validation_1-mlogloss:0.874419
+[7]	validation_0-mlogloss:0.857483	validation_1-mlogloss:0.857836
+[8]	validation_0-mlogloss:0.842563	validation_1-mlogloss:0.843378
+[9]	validation_0-mlogloss:0.829966	validation_1-mlogloss:0.830901
+
+1
+Точность: 0.7052603234211025
+ROC AUC: 0.6521492341805059
+
+Модель верхнего уровня 
+ROC AUC: 0.6521492341805059
+Traceback (most recent call last):
+  File "<ipython-input-104-6bda7b6b8b40>", line 24, in <module>
+    res = validate_on_holdout(train, model, verbose=True)
+  File "../scripts/pipeline.py", line 66, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 470, in fit
+    model.fit(X_train, y_train, eval_set=[(X_train, y_train), (X_test, y_test)])
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/sklearn.py", line 732, in fit
+    callbacks=callbacks)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/training.py", line 216, in train
+    xgb_model=xgb_model, callbacks=callbacks)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/training.py", line 84, in _train_internal
+    bst_eval_set = bst.eval_set(evals, i, feval)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/core.py", line 1172, in eval_set
+    ctypes.byref(msg)))
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/core.py", line 176, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [08:29:03] /mnt/xgboost/src/metric/multiclass_metric.cu:32: Check failed: label_error >= 0 && label_error < static_cast<int32_t>(n_class): MultiClassEvaluation: label must be in [0, num_class), num_class=1 but found 1 in label
+Stack trace:
+  [bt] (0) /anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/./lib/libxgboost.so(+0xb4fc4) [0x7f13d68b4fc4]
+  [bt] (1) /anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/./lib/libxgboost.so(xgboost::metric::EvalMClassBase<xgboost::metric::EvalMultiLogLoss>::Eval(xgboost::HostDeviceVector<float> const&, xgboost::MetaInfo const&, bool)+0xc7b) [0x7f13d6a8c97b]
+  [bt] (2) /anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/./lib/libxgboost.so(+0x14b3db) [0x7f13d694b3db]
+  [bt] (3) /anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/./lib/libxgboost.so(XGBoosterEvalOneIter+0x31a) [0x7f13d68c366a]
+  [bt] (4) /anaconda/envs/py37_default/lib/python3.7/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7f18f6781ec0]
+  [bt] (5) /anaconda/envs/py37_default/lib/python3.7/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7f18f678187d]
+  [bt] (6) /anaconda/envs/py37_default/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(_ctypes_callproc+0x2ce) [0x7f18f699701e]
+  [bt] (7) /anaconda/envs/py37_default/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(+0x12a54) [0x7f18f6997a54]
+  [bt] (8) /anaconda/envs/py37_default/bin/python(_PyObject_FastCallKeywords+0x48b) [0x557f23f732db]
+
+
+
+[0]	validation_0-logloss:0.676495	validation_0-auc:0.596026	validation_1-logloss:0.675589	validation_1-auc:0.592105
+[1]	validation_0-logloss:0.660679	validation_0-auc:0.598619	validation_1-logloss:0.661686	validation_1-auc:0.594778
+[2]	validation_0-logloss:0.649678	validation_0-auc:0.599134	validation_1-logloss:0.650119	validation_1-auc:0.595656
+[3]	validation_0-logloss:0.640354	validation_0-auc:0.599646	validation_1-logloss:0.640589	validation_1-auc:0.596264
+[4]	validation_0-logloss:0.632429	validation_0-auc:0.599683	validation_1-logloss:0.632904	validation_1-auc:0.596575
+[5]	validation_0-logloss:0.62561	validation_0-auc:0.599957	validation_1-logloss:0.626598	validation_1-auc:0.596687
+[6]	validation_0-logloss:0.620729	validation_0-auc:0.600258	validation_1-logloss:0.621288	validation_1-auc:0.596836
+[7]	validation_0-logloss:0.616432	validation_0-auc:0.600579	validation_1-logloss:0.617049	validation_1-auc:0.596928
+[8]	validation_0-logloss:0.61252	validation_0-auc:0.600778	validation_1-logloss:0.613411	validation_1-auc:0.596885
+[9]	validation_0-logloss:0.609804	validation_0-auc:0.600884	validation_1-logloss:0.610529	validation_1-auc:0.596895
+Traceback (most recent call last):
+  File "<ipython-input-105-89db645b5470>", line 24, in <module>
+    res = validate_on_holdout(train, model, verbose=True)
+  File "../scripts/pipeline.py", line 66, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 474, in fit
+    auc = roc_auc_score(y_test, model.predict_proba(X_test), multi_class='ovr')
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 393, in roc_auc_score
+    sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_base.py", line 77, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 227, in _binary_roc_auc_score
+    sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 776, in roc_curve
+    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 543, in _binary_clf_curve
+    y_score = column_or_1d(y_score)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 848, in column_or_1d
+    "got an array of shape {} instead.".format(shape))
+ValueError: y should be a 1d array, got an array of shape (137406, 2) instead.
+
+[0]	validation_0-logloss:0.676495	validation_0-auc:0.596026	validation_1-logloss:0.675589	validation_1-auc:0.592105
+[1]	validation_0-logloss:0.660679	validation_0-auc:0.598619	validation_1-logloss:0.661686	validation_1-auc:0.594778
+[2]	validation_0-logloss:0.649678	validation_0-auc:0.599134	validation_1-logloss:0.650119	validation_1-auc:0.595656
+[3]	validation_0-logloss:0.640354	validation_0-auc:0.599646	validation_1-logloss:0.640589	validation_1-auc:0.596264
+[4]	validation_0-logloss:0.632429	validation_0-auc:0.599683	validation_1-logloss:0.632904	validation_1-auc:0.596575
+[5]	validation_0-logloss:0.62561	validation_0-auc:0.599957	validation_1-logloss:0.626598	validation_1-auc:0.596687
+[6]	validation_0-logloss:0.620729	validation_0-auc:0.600258	validation_1-logloss:0.621288	validation_1-auc:0.596836
+[7]	validation_0-logloss:0.616432	validation_0-auc:0.600579	validation_1-logloss:0.617049	validation_1-auc:0.596928
+[8]	validation_0-logloss:0.61252	validation_0-auc:0.600778	validation_1-logloss:0.613411	validation_1-auc:0.596885
+[9]	validation_0-logloss:0.609804	validation_0-auc:0.600884	validation_1-logloss:0.610529	validation_1-auc:0.596895
+Traceback (most recent call last):
+  File "<ipython-input-107-89db645b5470>", line 24, in <module>
+    res = validate_on_holdout(train, model, verbose=True)
+  File "../scripts/pipeline.py", line 66, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 474, in fit
+    auc = roc_auc_score(y_test, model.predict_proba(X_test))
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 393, in roc_auc_score
+    sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_base.py", line 77, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 227, in _binary_roc_auc_score
+    sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 776, in roc_curve
+    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 543, in _binary_clf_curve
+    y_score = column_or_1d(y_score)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 848, in column_or_1d
+    "got an array of shape {} instead.".format(shape))
+ValueError: y should be a 1d array, got an array of shape (137406, 2) instead.
+
+[0]	validation_0-auc:0.596026	validation_1-auc:0.592105
+[1]	validation_0-auc:0.598619	validation_1-auc:0.594778
+[2]	validation_0-auc:0.599134	validation_1-auc:0.595656
+[3]	validation_0-auc:0.599646	validation_1-auc:0.596264
+[4]	validation_0-auc:0.599683	validation_1-auc:0.596575
+[5]	validation_0-auc:0.599957	validation_1-auc:0.596687
+[6]	validation_0-auc:0.600258	validation_1-auc:0.596836
+[7]	validation_0-auc:0.600579	validation_1-auc:0.596928
+[8]	validation_0-auc:0.600778	validation_1-auc:0.596885
+[9]	validation_0-auc:0.600884	validation_1-auc:0.596895
+Traceback (most recent call last):
+  File "<ipython-input-109-5be704abfbe9>", line 24, in <module>
+    res = validate_on_holdout(train, model, verbose=True)
+  File "../scripts/pipeline.py", line 66, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 474, in fit
+    auc = roc_auc_score(y_test, model.predict_proba(X_test))
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 393, in roc_auc_score
+    sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_base.py", line 77, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 227, in _binary_roc_auc_score
+    sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 776, in roc_curve
+    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 543, in _binary_clf_curve
+    y_score = column_or_1d(y_score)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 73, in inner_f
+    return f(**kwargs)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/utils/validation.py", line 848, in column_or_1d
+    "got an array of shape {} instead.".format(shape))
+ValueError: y should be a 1d array, got an array of shape (137406, 2) instead.
+
+[0]	validation_0-auc:0.596026	validation_1-auc:0.592105
+[1]	validation_0-auc:0.598619	validation_1-auc:0.594778
+[2]	validation_0-auc:0.599134	validation_1-auc:0.595656
+[3]	validation_0-auc:0.599646	validation_1-auc:0.596264
+[4]	validation_0-auc:0.599683	validation_1-auc:0.596575
+[5]	validation_0-auc:0.599957	validation_1-auc:0.596687
+[6]	validation_0-auc:0.600258	validation_1-auc:0.596836
+[7]	validation_0-auc:0.600579	validation_1-auc:0.596928
+[8]	validation_0-auc:0.600778	validation_1-auc:0.596885
+[9]	validation_0-auc:0.600884	validation_1-auc:0.596895
+Traceback (most recent call last):
+  File "<ipython-input-111-5be704abfbe9>", line 24, in <module>
+    res = validate_on_holdout(train, model, verbose=True)
+  File "../scripts/pipeline.py", line 68, in validate_on_holdout
+    train['uplift'] = model.predict(train.drop([y_name, 'group'], axis=1))
+  File "../scripts/pipeline.py", line 506, in predict
+    pred = model.predict_proba(data)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/sklearn.py", line 834, in predict_proba
+    validate_features=validate_features)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/core.py", line 1284, in predict
+    self._validate_features(data)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/core.py", line 1690, in _validate_features
+    data.feature_names))
+ValueError: feature_names mismatch: ['f0', 'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13', 'f14'] ['f0', 'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15']
+training data did not have the following fields: f15
+
+[0]	validation_0-auc:0.596026	validation_1-auc:0.592105
+[1]	validation_0-auc:0.598619	validation_1-auc:0.594778
+[2]	validation_0-auc:0.599134	validation_1-auc:0.595656
+[3]	validation_0-auc:0.599646	validation_1-auc:0.596264
+[4]	validation_0-auc:0.599683	validation_1-auc:0.596575
+[5]	validation_0-auc:0.599957	validation_1-auc:0.596687
+[6]	validation_0-auc:0.600258	validation_1-auc:0.596836
+[7]	validation_0-auc:0.600579	validation_1-auc:0.596928
+[8]	validation_0-auc:0.600778	validation_1-auc:0.596885
+[9]	validation_0-auc:0.600884	validation_1-auc:0.596895
+[0]	validation_0-auc:0.596026	validation_1-auc:0.592105
+[1]	validation_0-auc:0.598619	validation_1-auc:0.594778
+[2]	validation_0-auc:0.599134	validation_1-auc:0.595656
+[3]	validation_0-auc:0.599646	validation_1-auc:0.596264
+[4]	validation_0-auc:0.599683	validation_1-auc:0.596575
+[5]	validation_0-auc:0.599957	validation_1-auc:0.596687
+[6]	validation_0-auc:0.600258	validation_1-auc:0.596836
+[7]	validation_0-auc:0.600579	validation_1-auc:0.596928
+[8]	validation_0-auc:0.600778	validation_1-auc:0.596885
+[9]	validation_0-auc:0.600884	validation_1-auc:0.596895
+[10]	validation_0-auc:0.601195	validation_1-auc:0.59709
+[11]	validation_0-auc:0.601456	validation_1-auc:0.597134
+[12]	validation_0-auc:0.601731	validation_1-auc:0.597038
+[13]	validation_0-auc:0.602071	validation_1-auc:0.597172
+[14]	validation_0-auc:0.602233	validation_1-auc:0.597193
+[15]	validation_0-auc:0.60254	validation_1-auc:0.597142
+[16]	validation_0-auc:0.602829	validation_1-auc:0.59715
+[17]	validation_0-auc:0.603153	validation_1-auc:0.597078
+[18]	validation_0-auc:0.603349	validation_1-auc:0.597178
+[19]	validation_0-auc:0.603688	validation_1-auc:0.597116
+[0]	validation_0-auc:0.595737	validation_1-auc:0.593268
+[1]	validation_0-auc:0.598236	validation_1-auc:0.595029
+[2]	validation_0-auc:0.59923	validation_1-auc:0.595959
+[3]	validation_0-auc:0.599703	validation_1-auc:0.596352
+[4]	validation_0-auc:0.600123	validation_1-auc:0.596514
+[5]	validation_0-auc:0.600273	validation_1-auc:0.596553
+[6]	validation_0-auc:0.600682	validation_1-auc:0.596596
+[7]	validation_0-auc:0.600838	validation_1-auc:0.596704
+[8]	validation_0-auc:0.601325	validation_1-auc:0.596755
+[9]	validation_0-auc:0.601501	validation_1-auc:0.59674
+[10]	validation_0-auc:0.601999	validation_1-auc:0.596684
+[11]	validation_0-auc:0.602213	validation_1-auc:0.596794
+[12]	validation_0-auc:0.602496	validation_1-auc:0.596743
+[13]	validation_0-auc:0.602744	validation_1-auc:0.596861
+[14]	validation_0-auc:0.603049	validation_1-auc:0.596912
+[15]	validation_0-auc:0.603327	validation_1-auc:0.596785
+[16]	validation_0-auc:0.603607	validation_1-auc:0.59687
+[17]	validation_0-auc:0.60378	validation_1-auc:0.596874
+[18]	validation_0-auc:0.604074	validation_1-auc:0.596802
+[19]	validation_0-auc:0.604219	validation_1-auc:0.596761
+[0]	validation_0-auc:0.596082	validation_1-auc:0.593368
+[1]	validation_0-auc:0.597193	validation_1-auc:0.594215
+[2]	validation_0-auc:0.598383	validation_1-auc:0.595115
+[3]	validation_0-auc:0.59875	validation_1-auc:0.595717
+[4]	validation_0-auc:0.599129	validation_1-auc:0.595631
+[5]	validation_0-auc:0.599702	validation_1-auc:0.596208
+[6]	validation_0-auc:0.600155	validation_1-auc:0.596592
+[7]	validation_0-auc:0.60051	validation_1-auc:0.596731
+[8]	validation_0-auc:0.600825	validation_1-auc:0.596776
+[9]	validation_0-auc:0.600973	validation_1-auc:0.596991
+[10]	validation_0-auc:0.601306	validation_1-auc:0.597039
+[11]	validation_0-auc:0.60161	validation_1-auc:0.59708
+[12]	validation_0-auc:0.601933	validation_1-auc:0.597154
+[13]	validation_0-auc:0.602102	validation_1-auc:0.59723
+[14]	validation_0-auc:0.602484	validation_1-auc:0.597128
+[15]	validation_0-auc:0.602883	validation_1-auc:0.597192
+[16]	validation_0-auc:0.603203	validation_1-auc:0.597196
+[17]	validation_0-auc:0.603492	validation_1-auc:0.597252
+[18]	validation_0-auc:0.603641	validation_1-auc:0.597314
+[19]	validation_0-auc:0.603829	validation_1-auc:0.59724
+[0]	validation_0-auc:0.595024	validation_1-auc:0.593003
+[1]	validation_0-auc:0.597328	validation_1-auc:0.594891
+[2]	validation_0-auc:0.597956	validation_1-auc:0.595397
+[3]	validation_0-auc:0.598558	validation_1-auc:0.595591
+[4]	validation_0-auc:0.599025	validation_1-auc:0.596037
+[5]	validation_0-auc:0.599562	validation_1-auc:0.596348
+[6]	validation_0-auc:0.599919	validation_1-auc:0.596532
+[7]	validation_0-auc:0.60042	validation_1-auc:0.596563
+[8]	validation_0-auc:0.600689	validation_1-auc:0.596657
+[9]	validation_0-auc:0.600987	validation_1-auc:0.596711
+[10]	validation_0-auc:0.601212	validation_1-auc:0.596786
+[11]	validation_0-auc:0.601457	validation_1-auc:0.596768
+[12]	validation_0-auc:0.601822	validation_1-auc:0.596804
+[13]	validation_0-auc:0.602018	validation_1-auc:0.596851
+[14]	validation_0-auc:0.602253	validation_1-auc:0.596848
+[15]	validation_0-auc:0.602507	validation_1-auc:0.596936
+[16]	validation_0-auc:0.602689	validation_1-auc:0.596977
+[17]	validation_0-auc:0.602965	validation_1-auc:0.596982
+[18]	validation_0-auc:0.603185	validation_1-auc:0.596989
+[19]	validation_0-auc:0.603405	validation_1-auc:0.596916
+[0]	validation_0-auc:0.596026	validation_1-auc:0.592105
+[1]	validation_0-auc:0.598619	validation_1-auc:0.594778
+[2]	validation_0-auc:0.599134	validation_1-auc:0.595656
+[3]	validation_0-auc:0.599646	validation_1-auc:0.596264
+[4]	validation_0-auc:0.599683	validation_1-auc:0.596575
+[0]	validation_0-auc:0.595737	validation_1-auc:0.593268
+[1]	validation_0-auc:0.598236	validation_1-auc:0.595029
+[2]	validation_0-auc:0.59923	validation_1-auc:0.595959
+[3]	validation_0-auc:0.599703	validation_1-auc:0.596352
+[4]	validation_0-auc:0.600123	validation_1-auc:0.596514
+[0]	validation_0-auc:0.596082	validation_1-auc:0.593368
+[1]	validation_0-auc:0.597193	validation_1-auc:0.594215
+[2]	validation_0-auc:0.598383	validation_1-auc:0.595115
+[3]	validation_0-auc:0.59875	validation_1-auc:0.595717
+[4]	validation_0-auc:0.599129	validation_1-auc:0.595631
+[0]	validation_0-auc:0.595024	validation_1-auc:0.593003
+[1]	validation_0-auc:0.597328	validation_1-auc:0.594891
+[2]	validation_0-auc:0.597956	validation_1-auc:0.595397
+[3]	validation_0-auc:0.598558	validation_1-auc:0.595591
+[4]	validation_0-auc:0.599025	validation_1-auc:0.596037
+[0]	validation_0-mlogloss:1.31085	validation_1-mlogloss:1.31338
+[1]	validation_0-mlogloss:1.25298	validation_1-mlogloss:1.25227
+[2]	validation_0-mlogloss:1.20117	validation_1-mlogloss:1.20076
+[3]	validation_0-mlogloss:1.15709	validation_1-mlogloss:1.15671
+[4]	validation_0-mlogloss:1.11757	validation_1-mlogloss:1.11876
+[5]	validation_0-mlogloss:1.08517	validation_1-mlogloss:1.08577
+[6]	validation_0-mlogloss:1.05646	validation_1-mlogloss:1.05711
+[7]	validation_0-mlogloss:1.03117	validation_1-mlogloss:1.03202
+[8]	validation_0-mlogloss:1.00889	validation_1-mlogloss:1.01007
+[9]	validation_0-mlogloss:0.989981	validation_1-mlogloss:0.990724
+
+1
+Точность: 0.6840967643334352
+ROC AUC: 0.6876525937990652
+[0]	validation_0-mlogloss:1.31053	validation_1-mlogloss:1.31345
+[1]	validation_0-mlogloss:1.25248	validation_1-mlogloss:1.25255
+[2]	validation_0-mlogloss:1.20129	validation_1-mlogloss:1.20092
+[3]	validation_0-mlogloss:1.15755	validation_1-mlogloss:1.15726
+[4]	validation_0-mlogloss:1.11848	validation_1-mlogloss:1.11931
+[5]	validation_0-mlogloss:1.08555	validation_1-mlogloss:1.08628
+[6]	validation_0-mlogloss:1.05699	validation_1-mlogloss:1.05753
+[7]	validation_0-mlogloss:1.03177	validation_1-mlogloss:1.03234
+[8]	validation_0-mlogloss:1.00921	validation_1-mlogloss:1.01041
+[9]	validation_0-mlogloss:0.990184	validation_1-mlogloss:0.991106
+
+2
+Точность: 0.68410404203601
+ROC AUC: 0.6878969911447422
+[0]	validation_0-mlogloss:1.31087	validation_1-mlogloss:1.31336
+[1]	validation_0-mlogloss:1.25282	validation_1-mlogloss:1.25246
+[2]	validation_0-mlogloss:1.20099	validation_1-mlogloss:1.20099
+[3]	validation_0-mlogloss:1.15742	validation_1-mlogloss:1.15677
+[4]	validation_0-mlogloss:1.11807	validation_1-mlogloss:1.11888
+[5]	validation_0-mlogloss:1.08545	validation_1-mlogloss:1.08591
+[6]	validation_0-mlogloss:1.0567	validation_1-mlogloss:1.05723
+[7]	validation_0-mlogloss:1.03133	validation_1-mlogloss:1.03211
+[8]	validation_0-mlogloss:1.00896	validation_1-mlogloss:1.01009
+[9]	validation_0-mlogloss:0.98984	validation_1-mlogloss:0.990756
+
+3
+Точность: 0.6837765454201418
+ROC AUC: 0.6873447351764223
+[0]	validation_0-mlogloss:1.31046	validation_1-mlogloss:1.31331
+[1]	validation_0-mlogloss:1.25273	validation_1-mlogloss:1.25242
+[2]	validation_0-mlogloss:1.20129	validation_1-mlogloss:1.20078
+[3]	validation_0-mlogloss:1.15716	validation_1-mlogloss:1.1565
+[4]	validation_0-mlogloss:1.11768	validation_1-mlogloss:1.11862
+[5]	validation_0-mlogloss:1.08476	validation_1-mlogloss:1.08565
+[6]	validation_0-mlogloss:1.05661	validation_1-mlogloss:1.057
+[7]	validation_0-mlogloss:1.03094	validation_1-mlogloss:1.03197
+[8]	validation_0-mlogloss:1.0089	validation_1-mlogloss:1.00998
+[9]	validation_0-mlogloss:0.989873	validation_1-mlogloss:0.99066
+
+4
+Точность: 0.6839875987948124
+ROC AUC: 0.6881709147081626
+[0]	validation_0-mlogloss:1.31056	validation_1-mlogloss:1.31332
+[1]	validation_0-mlogloss:1.25299	validation_1-mlogloss:1.25235
+[2]	validation_0-mlogloss:1.20123	validation_1-mlogloss:1.20101
+[3]	validation_0-mlogloss:1.1571	validation_1-mlogloss:1.15678
+[4]	validation_0-mlogloss:1.11767	validation_1-mlogloss:1.11877
+[5]	validation_0-mlogloss:1.08518	validation_1-mlogloss:1.08578
+[6]	validation_0-mlogloss:1.05647	validation_1-mlogloss:1.05719
+[7]	validation_0-mlogloss:1.03095	validation_1-mlogloss:1.03205
+[8]	validation_0-mlogloss:1.00899	validation_1-mlogloss:1.01016
+[9]	validation_0-mlogloss:0.989897	validation_1-mlogloss:0.990874
+
+5
+Точность: 0.6839439325793634
+ROC AUC: 0.6875632142004355
+[0]	validation_0-mlogloss:1.31037	validation_1-mlogloss:1.31338
+[1]	validation_0-mlogloss:1.25283	validation_1-mlogloss:1.25235
+[2]	validation_0-mlogloss:1.20137	validation_1-mlogloss:1.201
+[3]	validation_0-mlogloss:1.15718	validation_1-mlogloss:1.15682
+[4]	validation_0-mlogloss:1.1178	validation_1-mlogloss:1.11881
+[5]	validation_0-mlogloss:1.0852	validation_1-mlogloss:1.08588
+[6]	validation_0-mlogloss:1.05653	validation_1-mlogloss:1.05718
+[7]	validation_0-mlogloss:1.03105	validation_1-mlogloss:1.03209
+[8]	validation_0-mlogloss:1.00896	validation_1-mlogloss:1.01009
+[9]	validation_0-mlogloss:0.989936	validation_1-mlogloss:0.990812
+
+6
+Точность: 0.6839584879845131
+ROC AUC: 0.687687948698392
+[0]	validation_0-mlogloss:1.3104	validation_1-mlogloss:1.31344
+[1]	validation_0-mlogloss:1.25311	validation_1-mlogloss:1.25231
+[2]	validation_0-mlogloss:1.20115	validation_1-mlogloss:1.2008
+[3]	validation_0-mlogloss:1.15713	validation_1-mlogloss:1.15657
+[4]	validation_0-mlogloss:1.11763	validation_1-mlogloss:1.11874
+[5]	validation_0-mlogloss:1.08522	validation_1-mlogloss:1.08574
+[6]	validation_0-mlogloss:1.05657	validation_1-mlogloss:1.05705
+[7]	validation_0-mlogloss:1.03106	validation_1-mlogloss:1.032
+[8]	validation_0-mlogloss:1.00896	validation_1-mlogloss:1.01004
+[9]	validation_0-mlogloss:0.989916	validation_1-mlogloss:0.990797
+
+7
+Точность: 0.6841404305488843
+ROC AUC: 0.6876006254719232
+[0]	validation_0-mlogloss:1.3106	validation_1-mlogloss:1.31327
+[1]	validation_0-mlogloss:1.25282	validation_1-mlogloss:1.25246
+[2]	validation_0-mlogloss:1.2012	validation_1-mlogloss:1.20085
+[3]	validation_0-mlogloss:1.15682	validation_1-mlogloss:1.15674
+[4]	validation_0-mlogloss:1.11783	validation_1-mlogloss:1.11883
+[5]	validation_0-mlogloss:1.08512	validation_1-mlogloss:1.08584
+[6]	validation_0-mlogloss:1.05656	validation_1-mlogloss:1.05722
+[7]	validation_0-mlogloss:1.03096	validation_1-mlogloss:1.03217
+[8]	validation_0-mlogloss:1.00904	validation_1-mlogloss:1.01016
+[9]	validation_0-mlogloss:0.989897	validation_1-mlogloss:0.99087
+
+8
+Точность: 0.6840167096051119
+ROC AUC: 0.687474995954052
+[0]	validation_0-mlogloss:1.31076	validation_1-mlogloss:1.31349
+[1]	validation_0-mlogloss:1.25275	validation_1-mlogloss:1.25253
+[2]	validation_0-mlogloss:1.20128	validation_1-mlogloss:1.20089
+[3]	validation_0-mlogloss:1.15702	validation_1-mlogloss:1.15676
+[4]	validation_0-mlogloss:1.11796	validation_1-mlogloss:1.11878
+[5]	validation_0-mlogloss:1.08531	validation_1-mlogloss:1.08584
+[6]	validation_0-mlogloss:1.05665	validation_1-mlogloss:1.05719
+[7]	validation_0-mlogloss:1.03104	validation_1-mlogloss:1.03208
+[8]	validation_0-mlogloss:1.00896	validation_1-mlogloss:1.01008
+[9]	validation_0-mlogloss:0.98982	validation_1-mlogloss:0.990761
+
+9
+Точность: 0.6840822089282855
+ROC AUC: 0.6874568643752582
+[0]	validation_0-mlogloss:1.31051	validation_1-mlogloss:1.31333
+[1]	validation_0-mlogloss:1.25278	validation_1-mlogloss:1.25233
+[2]	validation_0-mlogloss:1.20123	validation_1-mlogloss:1.20087
+[3]	validation_0-mlogloss:1.15705	validation_1-mlogloss:1.15686
+[4]	validation_0-mlogloss:1.11776	validation_1-mlogloss:1.11883
+[5]	validation_0-mlogloss:1.08539	validation_1-mlogloss:1.08591
+[6]	validation_0-mlogloss:1.05675	validation_1-mlogloss:1.05726
+[7]	validation_0-mlogloss:1.03116	validation_1-mlogloss:1.03217
+[8]	validation_0-mlogloss:1.00929	validation_1-mlogloss:1.01045
+[9]	validation_0-mlogloss:0.990215	validation_1-mlogloss:0.991084
+
+10
+Точность: 0.6840385427128364
+ROC AUC: 0.6876577829594355
+
+Модель верхнего уровня 
+ROC AUC: 0.688577129550109
