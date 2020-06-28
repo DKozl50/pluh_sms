@@ -21,10 +21,11 @@
         <a class="nav-link" href="{{ url_for('mark') }}">Интерпретация модели {% if type == 'mark'%} <span class="sr-only">(current)</span> {% endif %}</a>
       </li>
     </ul>
-
       <form class="form-inline my-2 my-lg-0 float-right col-5" action="{{ url_for('search_get') }}" method=get>
+<!--
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name=id style="min-width:70%">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+-->
       </form>
   </div>
 </nav>

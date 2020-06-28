@@ -4,11 +4,20 @@
 
 <div class = "container" style = "min-width:90%">
   <div class = "row">
-    <h3 class = "py-3 px-3">Ранжирование нашей модели на выборке из 100 человек. Красные слои — фичи, которые тянут человека вверх, синие — вниз</h3>
+    <h3 class = "py-3 px-3">Ранжирование нашей модели на выборке из 100 человек. Красные слои — фичи, которые тянут человека вверх, синие — вниз.</h3>
     <img class = "py-3 px-3" src="{{url_for('static', filename='mark_2.jpg')}}" align="middle" alt="" width="100%" height=""/>
   </div>
+  <div class = "row">
     <h3 class = "py-3 px-3">Вклад различных признаков в поведение модели.</h3>
     <img class = "py-3 px-3" src="{{url_for('static', filename='mark_4.jpg')}}" align="middle" alt="" width="100%" height=""/>
+  </div>
+  <div class = "row">
+    <h3 class = "py-3 px-3">Вклад различных признаков в решение модели для предсказания места одного человека в итоговом ранжировании.</h3>
+    <img class = "py-3 px-3" src="{{url_for('static', filename='mark_5.jpg')}}" align="middle" alt="" width="100%" height=""/>
+  </div>
+  <div class = "row">
+    <h3 class = "py-3 px-3">Распределение ранжирующего скора, присвоенного моделью.</h3>
+    <img class = "py-3 px-3" src="{{url_for('static', filename='mark_6.jpg')}}" align="middle" alt="" width="100%" height=""/>
   </div>
 </div>
 {% endblock %}
