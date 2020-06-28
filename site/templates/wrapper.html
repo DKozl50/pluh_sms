@@ -2,26 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Pluh</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="{{ url_for('main') }}">
-    <img src="{{url_for('static', filename='pluh.png')}}" align="middle" alt="" width="50" height="50"/>
-  </a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class = "container mx-0">
+    <a class="navbar-brand col-1" href="{{ url_for('main') }}">
+      <img src="{{url_for('static', filename='pluh.png')}}" align="middle" alt="" width="50" height="50"/>
+    </a>
 
-    <form class="form-inline my-2 my-lg-0 float-right" action="{{ url_for('search_get') }}" method=get>
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name=id>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      <form class="form-inline my-2 my-lg-0 float-right col-10" action="{{ url_for('search_get') }}" method=get>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name=id style="min-width: 400px">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
   </div>
 </nav>
     {% block content %}
 
     {% endblock %}
-  </div>
+    <script>
+      // window.dispatchEvent(new Event('resize'));
+    </script>
 </body>
 
 </html>

@@ -12,8 +12,14 @@ def main():
 @app.route('/graph')
 def graph():
     s = randint(10,30)
-    fig =px.scatter(x=range(s), y=range(s))
-    fig.write_html("templates/gen/graph.html")
+    fig =px.scatter(x=range(s), y=range(s), height=300)
+    fig.update_layout(
+        margin=dict(l=20, r=20, t=20, b=20),
+        paper_bgcolor="#f8f9fa",
+    )
+    fig.write_html("templates/main_page/empty.html")
+    fig.write_html("templates/main_page/empty1.html")
+    fig.write_html("templates/main_page/empty2.html")
     return redirect(url_for('main'))
 
 @app.route('/search')
@@ -24,4 +30,4 @@ def search_get():
     return render_template("search.html", id = id)
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(host="0.0.0.0", debug = True)
