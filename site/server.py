@@ -7,11 +7,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template("index.html", type = "-")
-
-@app.route('/first_analysis')
-def mitya():
     return render_template("mitya.html", type = "mitya")
+
+@app.route('/sec')
+def mark():
+    return render_template("mark.html", type = "mark")
 
 @app.route('/graph')
 def graph():

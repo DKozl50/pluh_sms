@@ -15,13 +15,10 @@
     </a>
     <ul class="navbar-nav col-5">
       <li class="nav-item {% if type == 'mitya'%} active {% endif %} mx-3">
-        <a class="nav-link" href="{{ url_for('mitya') }}">Первичный анализ датасета {% if type == 'mitya'%} <span class="sr-only">(current)</span> {% endif %}</a>
+        <a class="nav-link" href="{{ url_for('main') }}">Первичный анализ датасета {% if type == 'mitya'%} <span class="sr-only">(current)</span> {% endif %}</a>
       </li>
-      <li class="nav-item mx-3">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item mx-3">
-        <a class="nav-link" href="#">Pricing</a>
+      <li class="nav-item {% if type == 'mark'%} active {% endif %} mx-3">
+        <a class="nav-link" href="{{ url_for('mark') }}">Интерпретация модели {% if type == 'mark'%} <span class="sr-only">(current)</span> {% endif %}</a>
       </li>
     </ul>
 
