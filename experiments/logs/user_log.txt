@@ -5928,3 +5928,21 @@ ROC AUC: 0.6876577829594355
 
 Модель верхнего уровня 
 ROC AUC: 0.688577129550109
+Traceback (most recent call last):
+  File "<ipython-input-15-802b36bf3be3>", line 24, in <module>
+    res = validate_on_holdout(train, model, verbose=True)
+  File "../scripts/pipeline.py", line 65, in validate_on_holdout
+    shuffle=True, random_state=42)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/model_selection/_split.py", line 2152, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/model_selection/_split.py", line 1341, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/sklearn/model_selection/_split.py", line 1663, in _iter_indices
+    classes, y_indices = np.unique(y, return_inverse=True)
+  File "<__array_function__ internals>", line 6, in unique
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/numpy/lib/arraysetops.py", line 263, in unique
+    ret = _unique1d(ar, return_index, return_inverse, return_counts)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/numpy/lib/arraysetops.py", line 308, in _unique1d
+    perm = ar.argsort(kind='mergesort' if return_index else 'quicksort')
+KeyboardInterrupt
+
