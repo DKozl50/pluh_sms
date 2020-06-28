@@ -336,8 +336,9 @@ class SemiStackedModel:
         
         
 class BlendedModel:
-    def __init__(self, models):
+    def __init__(self, models, verbose=True):
         self.models = models
+        self.verbose = verbose
 
     def fit(self, data, eval_data=None):
         """
@@ -360,7 +361,10 @@ class BlendedModel:
         top_feats_train = []
         top_feats_test = []
         for name, model in self.models.items():
-            model.fit(X_train, y_train, eval_set=[(X_train, y_train), (X_test, y_test)])
+            if self.verbose:
+                model.fit(X_train, y_train, eval_set=[(X_train, y_train), (X_test, y_test)])
+            else:
+                model.fit(X_train, y_train)
             acc = accuracy_score(y_test, model.predict(X_test))
             auc = roc_auc_score(y_test, model.predict_proba(X_test), multi_class='ovr')
             print('\n' + name + f'\nТочность: {acc}\nROC AUC: {auc}')
@@ -400,3 +404,36 @@ class BlendedModel:
             return final, pred
         else:
             return final        
+        
+        
+def night_preprocess(data):
+    
+    data['gender'].replace({'Ж': 0, 'М': 1, 'Не определен': np.NaN}, inplace=True)
+    cols_now = list(data.columns)
+    
+    
+    data['response_std'] = data[['response_sms', 'response_viber']].std(axis=1)
+    data['response_multi'] = data['response_sms'] * data['response_viber']
+
+    cols = ['days_between_visits_15d', 'discount_depth_15d', 'discount_depth_1m']
+    for col in cols:
+        data['mean_' + col] = data['stdev_' + col] / data['k_var_' + col]
+        
+    months = ['3m', '6m', '12m']
+    for s in months:
+        for i in range(10, 60):
+            count = 'sale_count_' + s + '_g' + str(i)
+            sums = 'sale_sum_' + s + '_g' + str(i)
+            if (count in data.columns) and (sums in data.columns):
+                data['sale_mean_' + s + '_g' + str(i)] = data[sums] / data[count]
+                print(sums, count)
+
+    data['use_of_perdelta'] = data['perdelta_days_between_visits_15_30d'] * data['mean_days_between_visits_15d']
+    
+    data['mean_crazy_6m'] = data['crazy_purchases_goods_count_6m'] / data['crazy_purchases_cheque_count_6m']
+    data['mean_crazy_12m'] = data['crazy_purchases_goods_count_12m'] / data['crazy_purchases_cheque_count_12m']
+    
+    data['food_growth'] = data['food_share_15d'] / data['food_share_1m']
+    
+    new_cols = list(set(data.columns).difference(cols_now))
+    return new_cols

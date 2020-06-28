@@ -124,3 +124,542 @@ azureml.exceptions._azureml_exception.ModelPathNotFoundException: ModelPathNotFo
     }
 }
 
+[0]	validation_0-mlogloss:1.3125	validation_1-mlogloss:1.31514
+[1]	validation_0-mlogloss:1.25478	validation_1-mlogloss:1.25445
+[2]	validation_0-mlogloss:1.20356	validation_1-mlogloss:1.20313
+[3]	validation_0-mlogloss:1.15965	validation_1-mlogloss:1.15888
+[4]	validation_0-mlogloss:1.12163	validation_1-mlogloss:1.1216
+
+1
+Точность: 0.6810692400622972
+ROC AUC: 0.6863712765163887
+[0]	validation_0-mlogloss:1.31307	validation_1-mlogloss:1.31501
+[1]	validation_0-mlogloss:1.25535	validation_1-mlogloss:1.25587
+[2]	validation_0-mlogloss:1.20406	validation_1-mlogloss:1.20435
+[3]	validation_0-mlogloss:1.16122	validation_1-mlogloss:1.16097
+[4]	validation_0-mlogloss:1.12311	validation_1-mlogloss:1.12255
+
+2
+Точность: 0.6792498144185843
+ROC AUC: 0.6852800904227574
+[0]	validation_0-mlogloss:1.31194	validation_1-mlogloss:1.3144
+[1]	validation_0-mlogloss:1.25521	validation_1-mlogloss:1.25527
+[2]	validation_0-mlogloss:1.20451	validation_1-mlogloss:1.20433
+[3]	validation_0-mlogloss:1.16043	validation_1-mlogloss:1.16006
+[4]	validation_0-mlogloss:1.12148	validation_1-mlogloss:1.12183
+
+3
+Точность: 0.6816441785657104
+ROC AUC: 0.6838667710737844
+
+Модель верхнего уровня 
+ROC AUC: 0.6871873387635427
+Traceback (most recent call last):
+  File "<ipython-input-111-0cf42c31d2e3>", line 21, in <module>
+    run.log('test_metric', res[1]['test'])
+TypeError: 'BlendedModel' object is not subscriptable
+
+[0]	validation_0-mlogloss:1.3125	validation_1-mlogloss:1.31514
+[1]	validation_0-mlogloss:1.25478	validation_1-mlogloss:1.25445
+[2]	validation_0-mlogloss:1.20356	validation_1-mlogloss:1.20313
+[3]	validation_0-mlogloss:1.15965	validation_1-mlogloss:1.15888
+[4]	validation_0-mlogloss:1.12163	validation_1-mlogloss:1.1216
+
+1
+Точность: 0.6810692400622972
+ROC AUC: 0.6863712765163887
+[0]	validation_0-mlogloss:1.31307	validation_1-mlogloss:1.31501
+[1]	validation_0-mlogloss:1.25535	validation_1-mlogloss:1.25587
+[2]	validation_0-mlogloss:1.20406	validation_1-mlogloss:1.20435
+[3]	validation_0-mlogloss:1.16122	validation_1-mlogloss:1.16097
+[4]	validation_0-mlogloss:1.12311	validation_1-mlogloss:1.12255
+
+2
+Точность: 0.6792498144185843
+ROC AUC: 0.6852800904227574
+[0]	validation_0-mlogloss:1.31194	validation_1-mlogloss:1.3144
+[1]	validation_0-mlogloss:1.25521	validation_1-mlogloss:1.25527
+[2]	validation_0-mlogloss:1.20451	validation_1-mlogloss:1.20433
+[3]	validation_0-mlogloss:1.16043	validation_1-mlogloss:1.16006
+[4]	validation_0-mlogloss:1.12148	validation_1-mlogloss:1.12183
+
+3
+Точность: 0.6816441785657104
+ROC AUC: 0.6838667710737844
+
+Модель верхнего уровня 
+ROC AUC: 0.6871873387635427
+Traceback (most recent call last):
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 2646, in get_loc
+    return self._engine.get_loc(key)
+  File "pandas/_libs/index.pyx", line 111, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1619, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1627, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'group'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<ipython-input-124-c0e01ff519d7>", line 17, in <module>
+    res = validate_on_holdout(cur_data, model, verbose=True)
+  File "../scripts/pipeline.py", line 63, in validate_on_holdout
+    train, test = train_test_split(data, test_size=test_size, stratify=data['group'],
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/frame.py", line 2800, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 2648, in get_loc
+    return self._engine.get_loc(self._maybe_cast_indexer(key))
+  File "pandas/_libs/index.pyx", line 111, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1619, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1627, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'group'
+
+[0]	validation_0-mlogloss:1.31145	validation_1-mlogloss:1.31385
+[1]	validation_0-mlogloss:1.25455	validation_1-mlogloss:1.25364
+[2]	validation_0-mlogloss:1.20283	validation_1-mlogloss:1.20244
+[3]	validation_0-mlogloss:1.15901	validation_1-mlogloss:1.15857
+[4]	validation_0-mlogloss:1.12024	validation_1-mlogloss:1.1207
+
+1
+Точность: 0.6825102251721177
+ROC AUC: 0.685009337199227
+[0]	validation_0-mlogloss:1.31144	validation_1-mlogloss:1.31374
+[1]	validation_0-mlogloss:1.25435	validation_1-mlogloss:1.25387
+[2]	validation_0-mlogloss:1.20306	validation_1-mlogloss:1.20251
+[3]	validation_0-mlogloss:1.15889	validation_1-mlogloss:1.15821
+[4]	validation_0-mlogloss:1.11969	validation_1-mlogloss:1.12036
+
+2
+Точность: 0.6827212785467883
+ROC AUC: 0.6851093944296904
+
+Модель верхнего уровня 
+ROC AUC: 0.6860237710599287
+[0]	validation_0-mlogloss:1.31203	validation_1-mlogloss:1.31472
+[1]	validation_0-mlogloss:1.25459	validation_1-mlogloss:1.25482
+[2]	validation_0-mlogloss:1.20287	validation_1-mlogloss:1.20313
+[3]	validation_0-mlogloss:1.15963	validation_1-mlogloss:1.15956
+[4]	validation_0-mlogloss:1.12136	validation_1-mlogloss:1.12177
+[5]	validation_0-mlogloss:1.08864	validation_1-mlogloss:1.08952
+[6]	validation_0-mlogloss:1.05995	validation_1-mlogloss:1.06069
+[7]	validation_0-mlogloss:1.03496	validation_1-mlogloss:1.03564
+[8]	validation_0-mlogloss:1.01258	validation_1-mlogloss:1.01377
+[9]	validation_0-mlogloss:0.993431	validation_1-mlogloss:0.994904
+[10]	validation_0-mlogloss:0.976198	validation_1-mlogloss:0.977714
+[11]	validation_0-mlogloss:0.960767	validation_1-mlogloss:0.962446
+[12]	validation_0-mlogloss:0.946687	validation_1-mlogloss:0.948572
+[13]	validation_0-mlogloss:0.934741	validation_1-mlogloss:0.936541
+[14]	validation_0-mlogloss:0.923953	validation_1-mlogloss:0.925599
+[15]	validation_0-mlogloss:0.913792	validation_1-mlogloss:0.915868
+[16]	validation_0-mlogloss:0.905056	validation_1-mlogloss:0.907429
+[17]	validation_0-mlogloss:0.897611	validation_1-mlogloss:0.899839
+[18]	validation_0-mlogloss:0.890182	validation_1-mlogloss:0.892839
+[19]	validation_0-mlogloss:0.884126	validation_1-mlogloss:0.88668
+
+1
+Точность: 0.6838493224458903
+ROC AUC: 0.6890826630536782
+[0]	validation_0-mlogloss:1.31203	validation_1-mlogloss:1.31478
+[1]	validation_0-mlogloss:1.25399	validation_1-mlogloss:1.25357
+[2]	validation_0-mlogloss:1.2019	validation_1-mlogloss:1.20203
+[3]	validation_0-mlogloss:1.15779	validation_1-mlogloss:1.15785
+[4]	validation_0-mlogloss:1.11946	validation_1-mlogloss:1.12028
+[5]	validation_0-mlogloss:1.08639	validation_1-mlogloss:1.08723
+[6]	validation_0-mlogloss:1.05816	validation_1-mlogloss:1.05882
+[7]	validation_0-mlogloss:1.03309	validation_1-mlogloss:1.03351
+[8]	validation_0-mlogloss:1.01053	validation_1-mlogloss:1.01174
+[9]	validation_0-mlogloss:0.991378	validation_1-mlogloss:0.992564
+[10]	validation_0-mlogloss:0.974088	validation_1-mlogloss:0.975344
+[11]	validation_0-mlogloss:0.959211	validation_1-mlogloss:0.96063
+[12]	validation_0-mlogloss:0.94546	validation_1-mlogloss:0.947098
+[13]	validation_0-mlogloss:0.933256	validation_1-mlogloss:0.935214
+[14]	validation_0-mlogloss:0.922701	validation_1-mlogloss:0.924509
+[15]	validation_0-mlogloss:0.913303	validation_1-mlogloss:0.915115
+[16]	validation_0-mlogloss:0.904311	validation_1-mlogloss:0.906581
+[17]	validation_0-mlogloss:0.897045	validation_1-mlogloss:0.8991
+[18]	validation_0-mlogloss:0.88981	validation_1-mlogloss:0.892384
+[19]	validation_0-mlogloss:0.883861	validation_1-mlogloss:0.886253
+
+2
+Точность: 0.6837110460969681
+ROC AUC: 0.6895344090448026
+Traceback (most recent call last):
+  File "<ipython-input-66-f8fee5b4c6d3>", line 17, in <module>
+    res = validate_on_holdout(cur_data, model, verbose=True)
+  File "../scripts/pipeline.py", line 65, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 368, in fit
+    top_feats_test.append(model.predict_proba(X_test))
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/sklearn.py", line 834, in predict_proba
+    validate_features=validate_features)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/core.py", line 1292, in predict
+    ctypes.byref(preds)))
+KeyboardInterrupt
+
+[0]	validation_0-mlogloss:1.31186	validation_1-mlogloss:1.31535
+[1]	validation_0-mlogloss:1.25751	validation_1-mlogloss:1.25553
+Traceback (most recent call last):
+  File "<ipython-input-67-40c2aac3ba46>", line 17, in <module>
+    res = validate_on_holdout(cur_data, model, verbose=True)
+  File "../scripts/pipeline.py", line 65, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 363, in fit
+    model.fit(X_train, y_train, eval_set=[(X_train, y_train), (X_test, y_test)])
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/sklearn.py", line 732, in fit
+    callbacks=callbacks)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/training.py", line 216, in train
+    xgb_model=xgb_model, callbacks=callbacks)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/training.py", line 74, in _train_internal
+    bst.update(dtrain, i, obj)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/core.py", line 1109, in update
+    dtrain.handle))
+KeyboardInterrupt
+
+[0]	validation_0-mlogloss:1.31186	validation_1-mlogloss:1.31535
+[1]	validation_0-mlogloss:1.25751	validation_1-mlogloss:1.25553
+[2]	validation_0-mlogloss:1.20441	validation_1-mlogloss:1.20443
+[3]	validation_0-mlogloss:1.16288	validation_1-mlogloss:1.16138
+[4]	validation_0-mlogloss:1.12404	validation_1-mlogloss:1.12405
+
+1
+Точность: 0.6765061205478654
+ROC AUC: 0.6792942020539261
+[0]	validation_0-mlogloss:1.31316	validation_1-mlogloss:1.31545
+[1]	validation_0-mlogloss:1.25532	validation_1-mlogloss:1.25512
+[2]	validation_0-mlogloss:1.20423	validation_1-mlogloss:1.20426
+[3]	validation_0-mlogloss:1.16079	validation_1-mlogloss:1.16044
+[4]	validation_0-mlogloss:1.12295	validation_1-mlogloss:1.12308
+
+2
+Точность: 0.6783546570018777
+ROC AUC: 0.6814287532826684
+
+Модель верхнего уровня 
+ROC AUC: 0.6817525289786401
+[0]	validation_0-mlogloss:1.31101	validation_1-mlogloss:1.31358
+[1]	validation_0-mlogloss:1.25315	validation_1-mlogloss:1.25304
+[2]	validation_0-mlogloss:1.20221	validation_1-mlogloss:1.20178
+[3]	validation_0-mlogloss:1.15837	validation_1-mlogloss:1.15769
+[4]	validation_0-mlogloss:1.11919	validation_1-mlogloss:1.11974
+[5]	validation_0-mlogloss:1.08706	validation_1-mlogloss:1.0873
+[6]	validation_0-mlogloss:1.05864	validation_1-mlogloss:1.0589
+[7]	validation_0-mlogloss:1.03427	validation_1-mlogloss:1.03401
+[8]	validation_0-mlogloss:1.01109	validation_1-mlogloss:1.012
+[9]	validation_0-mlogloss:0.992444	validation_1-mlogloss:0.993047
+
+1
+Точность: 0.6826048353055907
+ROC AUC: 0.6871711116385428
+[0]	validation_0-mlogloss:1.31234	validation_1-mlogloss:1.31507
+[1]	validation_0-mlogloss:1.25461	validation_1-mlogloss:1.25512
+[2]	validation_0-mlogloss:1.20342	validation_1-mlogloss:1.20308
+[3]	validation_0-mlogloss:1.15976	validation_1-mlogloss:1.15932
+[4]	validation_0-mlogloss:1.12084	validation_1-mlogloss:1.12112
+[5]	validation_0-mlogloss:1.08739	validation_1-mlogloss:1.088
+[6]	validation_0-mlogloss:1.05914	validation_1-mlogloss:1.05955
+[7]	validation_0-mlogloss:1.03431	validation_1-mlogloss:1.03441
+[8]	validation_0-mlogloss:1.01147	validation_1-mlogloss:1.01248
+[9]	validation_0-mlogloss:0.992708	validation_1-mlogloss:0.993303
+
+2
+Точность: 0.6830196643523573
+ROC AUC: 0.6876792972511047
+[0]	validation_0-mlogloss:1.31221	validation_1-mlogloss:1.31495
+[1]	validation_0-mlogloss:1.25405	validation_1-mlogloss:1.25408
+[2]	validation_0-mlogloss:1.20325	validation_1-mlogloss:1.20305
+[3]	validation_0-mlogloss:1.15891	validation_1-mlogloss:1.15867
+[4]	validation_0-mlogloss:1.12016	validation_1-mlogloss:1.1209
+[5]	validation_0-mlogloss:1.08756	validation_1-mlogloss:1.08821
+[6]	validation_0-mlogloss:1.05942	validation_1-mlogloss:1.05992
+[7]	validation_0-mlogloss:1.03463	validation_1-mlogloss:1.03455
+[8]	validation_0-mlogloss:1.01132	validation_1-mlogloss:1.01234
+[9]	validation_0-mlogloss:0.992416	validation_1-mlogloss:0.993056
+
+3
+Точность: 0.6831069967832555
+ROC AUC: 0.6867305092563007
+
+Модель верхнего уровня 
+ROC AUC: 0.6881010399183508
+[0]	validation_0-mlogloss:1.31115	validation_1-mlogloss:1.31378
+[1]	validation_0-mlogloss:1.25273	validation_1-mlogloss:1.25313
+[2]	validation_0-mlogloss:1.20265	validation_1-mlogloss:1.20169
+[3]	validation_0-mlogloss:1.15869	validation_1-mlogloss:1.15803
+[4]	validation_0-mlogloss:1.11936	validation_1-mlogloss:1.1203
+[5]	validation_0-mlogloss:1.08692	validation_1-mlogloss:1.08758
+[6]	validation_0-mlogloss:1.05926	validation_1-mlogloss:1.05888
+[7]	validation_0-mlogloss:1.03449	validation_1-mlogloss:1.03394
+[8]	validation_0-mlogloss:1.0118	validation_1-mlogloss:1.01226
+[9]	validation_0-mlogloss:0.992949	validation_1-mlogloss:0.993021
+
+1
+Точность: 0.6823719488231955
+ROC AUC: 0.683832244599664
+[0]	validation_0-mlogloss:1.31103	validation_1-mlogloss:1.3138
+[1]	validation_0-mlogloss:1.25326	validation_1-mlogloss:1.25325
+[2]	validation_0-mlogloss:1.20268	validation_1-mlogloss:1.20196
+[3]	validation_0-mlogloss:1.15842	validation_1-mlogloss:1.15795
+[4]	validation_0-mlogloss:1.1194	validation_1-mlogloss:1.12026
+[5]	validation_0-mlogloss:1.08708	validation_1-mlogloss:1.08745
+[6]	validation_0-mlogloss:1.05914	validation_1-mlogloss:1.05899
+[7]	validation_0-mlogloss:1.03439	validation_1-mlogloss:1.03417
+[8]	validation_0-mlogloss:1.01215	validation_1-mlogloss:1.01239
+[9]	validation_0-mlogloss:0.992925	validation_1-mlogloss:0.993077
+
+2
+Точность: 0.6821900062588242
+ROC AUC: 0.6829506682972049
+[0]	validation_0-mlogloss:1.3118	validation_1-mlogloss:1.31374
+[1]	validation_0-mlogloss:1.25259	validation_1-mlogloss:1.2535
+[2]	validation_0-mlogloss:1.20282	validation_1-mlogloss:1.20209
+[3]	validation_0-mlogloss:1.15875	validation_1-mlogloss:1.15813
+[4]	validation_0-mlogloss:1.11957	validation_1-mlogloss:1.12029
+[5]	validation_0-mlogloss:1.08683	validation_1-mlogloss:1.08774
+[6]	validation_0-mlogloss:1.05917	validation_1-mlogloss:1.0591
+[7]	validation_0-mlogloss:1.03469	validation_1-mlogloss:1.03433
+[8]	validation_0-mlogloss:1.01227	validation_1-mlogloss:1.01231
+[9]	validation_0-mlogloss:0.992903	validation_1-mlogloss:0.993141
+
+3
+Точность: 0.6820662853150518
+ROC AUC: 0.6832117516561627
+
+Модель верхнего уровня 
+ROC AUC: 0.683708184695882
+[0]	validation_0-mlogloss:1.31242	validation_1-mlogloss:1.31492
+[1]	validation_0-mlogloss:1.25464	validation_1-mlogloss:1.25469
+[2]	validation_0-mlogloss:1.20419	validation_1-mlogloss:1.20365
+[3]	validation_0-mlogloss:1.16097	validation_1-mlogloss:1.16018
+[4]	validation_0-mlogloss:1.12279	validation_1-mlogloss:1.12225
+
+1
+Точность: 0.6798174752194227
+ROC AUC: 0.6794517513762847
+[0]	validation_0-mlogloss:1.31217	validation_1-mlogloss:1.31434
+[1]	validation_0-mlogloss:1.25409	validation_1-mlogloss:1.25471
+[2]	validation_0-mlogloss:1.20392	validation_1-mlogloss:1.20374
+[3]	validation_0-mlogloss:1.1604	validation_1-mlogloss:1.16027
+[4]	validation_0-mlogloss:1.12243	validation_1-mlogloss:1.12223
+
+2
+Точность: 0.6791624819876861
+ROC AUC: 0.6782222697387464
+
+Модель верхнего уровня 
+ROC AUC: 0.6794070014310769
+[0]	validation_0-mlogloss:1.31186	validation_1-mlogloss:1.31535
+[1]	validation_0-mlogloss:1.25751	validation_1-mlogloss:1.25553
+[2]	validation_0-mlogloss:1.20441	validation_1-mlogloss:1.20443
+[3]	validation_0-mlogloss:1.16288	validation_1-mlogloss:1.16138
+[4]	validation_0-mlogloss:1.12404	validation_1-mlogloss:1.12405
+
+1
+Точность: 0.6765061205478654
+ROC AUC: 0.6792942020539261
+[0]	validation_0-mlogloss:1.31316	validation_1-mlogloss:1.31545
+[1]	validation_0-mlogloss:1.25532	validation_1-mlogloss:1.25512
+[2]	validation_0-mlogloss:1.20423	validation_1-mlogloss:1.20426
+[3]	validation_0-mlogloss:1.16079	validation_1-mlogloss:1.16044
+[4]	validation_0-mlogloss:1.12295	validation_1-mlogloss:1.12308
+
+2
+Точность: 0.6783546570018777
+ROC AUC: 0.6814287532826684
+
+Модель верхнего уровня 
+ROC AUC: 0.6817525289786401
+[0]	validation_0-mlogloss:1.31186	validation_1-mlogloss:1.31535
+[1]	validation_0-mlogloss:1.25751	validation_1-mlogloss:1.25553
+[2]	validation_0-mlogloss:1.20441	validation_1-mlogloss:1.20443
+[3]	validation_0-mlogloss:1.16288	validation_1-mlogloss:1.16138
+[4]	validation_0-mlogloss:1.12404	validation_1-mlogloss:1.12405
+
+1
+Точность: 0.6765061205478654
+ROC AUC: 0.6792942020539261
+[0]	validation_0-mlogloss:1.31316	validation_1-mlogloss:1.31545
+[1]	validation_0-mlogloss:1.25532	validation_1-mlogloss:1.25512
+[2]	validation_0-mlogloss:1.20423	validation_1-mlogloss:1.20426
+[3]	validation_0-mlogloss:1.16079	validation_1-mlogloss:1.16044
+[4]	validation_0-mlogloss:1.12295	validation_1-mlogloss:1.12308
+
+2
+Точность: 0.6783546570018777
+ROC AUC: 0.6814287532826684
+
+Модель верхнего уровня 
+ROC AUC: 0.6817525289786401
+[0]	validation_0-mlogloss:1.31308	validation_1-mlogloss:1.31521
+[1]	validation_0-mlogloss:1.25532	validation_1-mlogloss:1.25591
+[2]	validation_0-mlogloss:1.20472	validation_1-mlogloss:1.20492
+[3]	validation_0-mlogloss:1.16109	validation_1-mlogloss:1.16066
+[4]	validation_0-mlogloss:1.12367	validation_1-mlogloss:1.12342
+
+1
+Точность: 0.6781363259246321
+ROC AUC: 0.6828948154446173
+[0]	validation_0-mlogloss:1.31154	validation_1-mlogloss:1.31488
+[1]	validation_0-mlogloss:1.25634	validation_1-mlogloss:1.256
+[2]	validation_0-mlogloss:1.20487	validation_1-mlogloss:1.20484
+[3]	validation_0-mlogloss:1.16178	validation_1-mlogloss:1.16101
+[4]	validation_0-mlogloss:1.1238	validation_1-mlogloss:1.12355
+
+2
+Точность: 0.6780853820066082
+ROC AUC: 0.6832170581365026
+
+Модель верхнего уровня 
+ROC AUC: 0.6845173380806134
+[0]	validation_0-mlogloss:1.3125	validation_1-mlogloss:1.31482
+[1]	validation_0-mlogloss:1.2546	validation_1-mlogloss:1.25416
+[2]	validation_0-mlogloss:1.20324	validation_1-mlogloss:1.20335
+[3]	validation_0-mlogloss:1.15958	validation_1-mlogloss:1.15905
+[4]	validation_0-mlogloss:1.12085	validation_1-mlogloss:1.12123
+[5]	validation_0-mlogloss:1.08878	validation_1-mlogloss:1.08912
+[6]	validation_0-mlogloss:1.06012	validation_1-mlogloss:1.06013
+[7]	validation_0-mlogloss:1.03506	validation_1-mlogloss:1.03489
+[8]	validation_0-mlogloss:1.01262	validation_1-mlogloss:1.01329
+[9]	validation_0-mlogloss:0.994243	validation_1-mlogloss:0.994487
+
+1
+Точность: 0.6826485015210398
+ROC AUC: 0.6867802031378255
+[0]	validation_0-mlogloss:1.31427	validation_1-mlogloss:1.31624
+[1]	validation_0-mlogloss:1.25658	validation_1-mlogloss:1.25592
+[2]	validation_0-mlogloss:1.20408	validation_1-mlogloss:1.20399
+[3]	validation_0-mlogloss:1.16151	validation_1-mlogloss:1.16123
+[4]	validation_0-mlogloss:1.12292	validation_1-mlogloss:1.12267
+[5]	validation_0-mlogloss:1.08929	validation_1-mlogloss:1.0895
+[6]	validation_0-mlogloss:1.06044	validation_1-mlogloss:1.06053
+[7]	validation_0-mlogloss:1.0358	validation_1-mlogloss:1.03563
+[8]	validation_0-mlogloss:1.01307	validation_1-mlogloss:1.01378
+[9]	validation_0-mlogloss:0.994132	validation_1-mlogloss:0.994549
+
+2
+Точность: 0.682837721787986
+ROC AUC: 0.687349332432996
+
+Модель верхнего уровня 
+ROC AUC: 0.6877053033687586
+[0]	validation_0-mlogloss:1.31556	validation_1-mlogloss:1.31767
+[1]	validation_0-mlogloss:1.25994	validation_1-mlogloss:1.25899
+[2]	validation_0-mlogloss:1.20855	validation_1-mlogloss:1.20961
+[3]	validation_0-mlogloss:1.16755	validation_1-mlogloss:1.16724
+[4]	validation_0-mlogloss:1.13172	validation_1-mlogloss:1.13105
+[5]	validation_0-mlogloss:1.09992	validation_1-mlogloss:1.09946
+[6]	validation_0-mlogloss:1.07204	validation_1-mlogloss:1.07212
+[7]	validation_0-mlogloss:1.04683	validation_1-mlogloss:1.0471
+[0]	validation_0-mlogloss:1.31225	validation_1-mlogloss:1.31593
+[1]	validation_0-mlogloss:1.25578	validation_1-mlogloss:1.25628
+[2]	validation_0-mlogloss:1.20623	validation_1-mlogloss:1.2057
+Traceback (most recent call last):
+  File "<ipython-input-117-4050097f1e24>", line 14, in <module>
+    res = validate_on_holdout(cur_data, model, verbose=False)
+  File "../scripts/pipeline.py", line 65, in validate_on_holdout
+    model.fit(train, test)
+  File "../scripts/pipeline.py", line 365, in fit
+    model.fit(X_train, y_train, eval_set=[(X_train, y_train), (X_test, y_test)])
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/sklearn.py", line 732, in fit
+    callbacks=callbacks)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/training.py", line 216, in train
+    xgb_model=xgb_model, callbacks=callbacks)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/training.py", line 84, in _train_internal
+    bst_eval_set = bst.eval_set(evals, i, feval)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/xgboost-0.90-py3.7.egg/xgboost/core.py", line 1172, in eval_set
+    ctypes.byref(msg)))
+KeyboardInterrupt
+
+
+1
+Точность: 0.6785365995662489
+ROC AUC: 0.6783512243124934
+
+2
+Точность: 0.6779834941705603
+ROC AUC: 0.6784541233178358
+
+Модель верхнего уровня 
+ROC AUC: 0.6790620418379957
+Traceback (most recent call last):
+  File "<ipython-input-118-0deede2675a9>", line 17, in <module>
+    run.log(name, val)
+  File "/anaconda/envs/py37_default/lib/python3.7/site-packages/azureml/core/run.py", line 1462, in log
+    raise UserErrorException("run.log does not support "
+azureml.exceptions._azureml_exception.UserErrorException: UserErrorException:
+	Message: run.log does not support list type. Use run.log_list instead
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "run.log does not support list type. Use run.log_list instead"
+    }
+}
+
+
+1
+Точность: 0.6785365995662489
+ROC AUC: 0.6783512243124934
+
+2
+Точность: 0.6779834941705603
+ROC AUC: 0.6784541233178358
+
+Модель верхнего уровня 
+ROC AUC: 0.6790620418379957
+
+1
+Точность: 0.6831433852961297
+ROC AUC: 0.6874648390400568
+
+2
+Точность: 0.6830706082703812
+ROC AUC: 0.6878652914583168
+
+Модель верхнего уровня 
+ROC AUC: 0.6882220386646153
+
+1
+Точность: 0.6699561882304994
+ROC AUC: 0.6825780219420885
+
+2
+Точность: 0.6703055179540922
+ROC AUC: 0.6785186874944888
+
+Модель верхнего уровня 
+ROC AUC: 0.682998111959916
+
+1
+Точность: 0.6703637395746911
+ROC AUC: 0.6838088257499727
+
+2
+Точность: 0.6704874605184635
+ROC AUC: 0.6803855433172183
+
+Модель верхнего уровня 
+ROC AUC: 0.6843178623457733
+
+1
+Точность: 0.683085163675531
+ROC AUC: 0.6873228255879872
+
+2
+Точность: 0.6830633305678063
+ROC AUC: 0.6876749629916945
+
+Модель верхнего уровня 
+ROC AUC: 0.6883209218478817
+
+1
+Точность: 0.6693739720245113
+ROC AUC: 0.6817065512563176
+
+2
+Точность: 0.6696432470197808
+ROC AUC: 0.6782232238993425
+
+Модель верхнего уровня 
+ROC AUC: 0.6824115461316189
