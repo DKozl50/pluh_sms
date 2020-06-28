@@ -1,0 +1,27 @@
+{% extends "wrapper.html" %}
+
+{% block content %}
+
+<div class = "container" style = "min-width:90%">
+  <div class = "row">
+    <div class = "col-6">
+      <h3 class = "py-3 px-3">Вид распределения среднего количества дней между походами в магазин для каждого человека</h3>
+    </div>
+    <div class = "col-6">
+      <h3 class = "py-3 px-3">Распределение возрастов всех картхолдеров</h3>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-6">
+      <img class = "py-3 px-3" src="{{url_for('static', filename='mark_1.jpg')}}" align="middle" alt="" width="100%" height=""/>
+    </div>
+    <div class = "col-6">
+      <img class = "py-3 px-3" src="{{url_for('static', filename='mark_3.jpg')}}" align="middle" alt="" width="100%" height=""/>
+    </div>
+  </div>
+  <div class = "row">
+    <h3 class = "py-3 px-3">Если посмотреть на признаки, важные для нашей модели, то можно заметить, что пропорции числа пришедших к непришедшим сильно колеблются, что позволяет выделить группу покупателей, для которых важна коммуникация.</h3>
+    <img class = "py-3 px-3" src="{{url_for('static', filename='wtf.png')}}" align="middle" alt="" width="100%" height=""/>
+  </div>
+</div>
+{% endblock %}
